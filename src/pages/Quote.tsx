@@ -32,12 +32,7 @@ const Quote = () => {
     try {
       const message = `Product(s) interested in: ${formData.products}${formData.address ? `\nAddress: ${formData.address}` : ''}`;
       
-      // Check if we're on Vercel deployment or local/preview
-      const apiUrl = window.location.hostname.includes('delta-life.vercel.app')
-        ? '/api/send-email'
-        : 'https://delta-life.vercel.app/api/send-email';
-      
-      const response = await fetch(apiUrl, {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
