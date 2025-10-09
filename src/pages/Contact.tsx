@@ -85,7 +85,7 @@ const Contact = () => {
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="Name"
                           required
-                          className="bg-[#3a4f63] border-[#4a5f73] text-white placeholder:text-gray-400"
+                          className="bg-white border-[#4a5f73] text-black placeholder:text-gray-500"
                         />
                       </div>
                       <div>
@@ -96,7 +96,7 @@ const Contact = () => {
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="Email"
                           required
-                          className="bg-[#3a4f63] border-[#4a5f73] text-white placeholder:text-gray-400"
+                          className="bg-white border-[#4a5f73] text-black placeholder:text-gray-500"
                         />
                       </div>
                     </div>
@@ -108,7 +108,7 @@ const Contact = () => {
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="Message"
                         maxLength={1000}
-                        className="min-h-[150px] bg-[#3a4f63] border-[#4a5f73] text-white placeholder:text-gray-400"
+                        className="min-h-[150px] bg-white border-[#4a5f73] text-black placeholder:text-gray-500"
                         required
                       />
                     </div>
