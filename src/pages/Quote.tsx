@@ -109,6 +109,7 @@ const Quote = () => {
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="John Doe"
                       required
+                      className="text-black bg-white"
                     />
                   </div>
 
@@ -119,6 +120,7 @@ const Quote = () => {
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                       placeholder="123 Main St, Atlanta, GA 30301"
+                      className="text-black bg-white"
                     />
                   </div>
 
@@ -131,23 +133,24 @@ const Quote = () => {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="john.doe@example.com"
                       required
+                      className="text-black bg-white"
                     />
                   </div>
 
                   <div>
                     <Label htmlFor="products">Products Interested In *</Label>
                     <Select value={formData.products} onValueChange={(value) => setFormData({ ...formData, products: value })}>
-                      <SelectTrigger>
+                      <SelectTrigger className="text-black bg-white">
                         <SelectValue placeholder="Select a product" />
                       </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="whole-life-classic">Delta Life Classic Preferred</SelectItem>
-                        <SelectItem value="whole-life-family">One Parent Family Policy</SelectItem>
-                        <SelectItem value="whole-life-graded">Graded Policy</SelectItem>
-                        <SelectItem value="whole-life-paidup">10/20-Year Paid Up</SelectItem>
-                        <SelectItem value="cancer">Cancer Insurance</SelectItem>
-                        <SelectItem value="property">Fire & Contents Insurance</SelectItem>
-                        <SelectItem value="multiple">Multiple Products</SelectItem>
+                      <SelectContent className="bg-white z-50">
+                        <SelectItem value="whole-life-classic" className="text-black">Delta Life Classic Preferred</SelectItem>
+                        <SelectItem value="whole-life-family" className="text-black">One Parent Family Policy</SelectItem>
+                        <SelectItem value="whole-life-graded" className="text-black">Graded Policy</SelectItem>
+                        <SelectItem value="whole-life-paidup" className="text-black">10/20-Year Paid Up</SelectItem>
+                        <SelectItem value="cancer" className="text-black">Cancer Insurance</SelectItem>
+                        <SelectItem value="property" className="text-black">Fire & Contents Insurance</SelectItem>
+                        <SelectItem value="multiple" className="text-black">Multiple Products</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
