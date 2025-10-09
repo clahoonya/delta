@@ -15,7 +15,7 @@ const Contact = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Form validation
@@ -28,20 +28,36 @@ const Contact = () => {
       return;
     }
 
-    // Create email body
-    const emailBody = `Name: ${formData.name}%0D%0A%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(formData.message)}`;
-    const emailSubject = `Contact Form Submission from ${formData.name}`;
-    
-    // Open mailto link
-    window.location.href = `mailto:info@delta-life.com?subject=${encodeURIComponent(emailSubject)}&body=${emailBody}`;
-    
-    toast({
-      title: "Opening Email Client",
-      description: "Your email client will open with the form data."
-    });
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          type: 'contact'
+        }),
+      });
 
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for contacting us. We'll get back to you soon."
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    }
   };
 
   return (

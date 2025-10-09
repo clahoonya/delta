@@ -17,7 +17,7 @@ const Quote = () => {
     products: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.email || !formData.products) {
@@ -29,14 +29,40 @@ const Quote = () => {
       return;
     }
 
-    console.log("Quote request submitted:", formData);
-    
-    toast({
-      title: "Quote Request Received!",
-      description: "Thank you! An agent will contact you shortly with your personalized quote."
-    });
+    try {
+      const message = `Product(s) interested in: ${formData.products}${formData.address ? `\nAddress: ${formData.address}` : ''}`;
+      
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message,
+          address: formData.address,
+          products: formData.products,
+          type: 'quote'
+        }),
+      });
 
-    setFormData({ name: "", address: "", email: "", products: "" });
+      if (response.ok) {
+        toast({
+          title: "Quote Request Received!",
+          description: "Thank you! An agent will contact you shortly with your personalized quote."
+        });
+        setFormData({ name: "", address: "", email: "", products: "" });
+      } else {
+        throw new Error('Failed to send quote request');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send quote request. Please try again.",
+        variant: "destructive"
+      });
+    }
   };
 
   return (
