@@ -102,30 +102,30 @@ const Quote = () => {
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <Label htmlFor="name">Full Name *</Label>
+                    <Label htmlFor="name" className="text-primary">Full Name *</Label>
                     <Input
                       id="name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="John Doe"
                       required
-                      className="text-black bg-white"
+                      className="!bg-white !text-black placeholder:!text-gray-500 border-gray-300"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="address">Address</Label>
+                    <Label htmlFor="address" className="text-primary">Address</Label>
                     <Input
                       id="address"
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                       placeholder="123 Main St, Atlanta, GA 30301"
-                      className="text-black bg-white"
+                      className="!bg-white !text-black placeholder:!text-gray-500 border-gray-300"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="email">Email Address *</Label>
+                    <Label htmlFor="email" className="text-primary">Email Address *</Label>
                     <Input
                       id="email"
                       type="email"
@@ -133,24 +133,24 @@ const Quote = () => {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="john.doe@example.com"
                       required
-                      className="text-black bg-white"
+                      className="!bg-white !text-black placeholder:!text-gray-500 border-gray-300"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="products">Products Interested In *</Label>
+                    <Label htmlFor="products" className="text-primary">Products Interested In *</Label>
                     <Select value={formData.products} onValueChange={(value) => setFormData({ ...formData, products: value })}>
-                      <SelectTrigger className="text-black bg-white">
-                        <SelectValue placeholder="Select a product" />
+                      <SelectTrigger className="!bg-white !text-black border-gray-300">
+                        <SelectValue placeholder="Select a product" className="!text-black" />
                       </SelectTrigger>
-                      <SelectContent className="bg-white z-50">
-                        <SelectItem value="whole-life-classic" className="text-black">Delta Life Classic Preferred</SelectItem>
-                        <SelectItem value="whole-life-family" className="text-black">One Parent Family Policy</SelectItem>
-                        <SelectItem value="whole-life-graded" className="text-black">Graded Policy</SelectItem>
-                        <SelectItem value="whole-life-paidup" className="text-black">10/20-Year Paid Up</SelectItem>
-                        <SelectItem value="cancer" className="text-black">Cancer Insurance</SelectItem>
-                        <SelectItem value="property" className="text-black">Fire & Contents Insurance</SelectItem>
-                        <SelectItem value="multiple" className="text-black">Multiple Products</SelectItem>
+                      <SelectContent className="!bg-white z-50">
+                        <SelectItem value="whole-life-classic" className="!text-black hover:!bg-gray-100">Delta Life Classic Preferred</SelectItem>
+                        <SelectItem value="whole-life-family" className="!text-black hover:!bg-gray-100">One Parent Family Policy</SelectItem>
+                        <SelectItem value="whole-life-graded" className="!text-black hover:!bg-gray-100">Graded Policy</SelectItem>
+                        <SelectItem value="whole-life-paidup" className="!text-black hover:!bg-gray-100">10/20-Year Paid Up</SelectItem>
+                        <SelectItem value="cancer" className="!text-black hover:!bg-gray-100">Cancer Insurance</SelectItem>
+                        <SelectItem value="property" className="!text-black hover:!bg-gray-100">Fire & Contents Insurance</SelectItem>
+                        <SelectItem value="multiple" className="!text-black hover:!bg-gray-100">Multiple Products</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
