@@ -1,7 +1,6 @@
 {
   "name": "delta-life-api",
   "version": "1.0.0",
-  "type": "module",
   "dependencies": {
     "resend": "^6.1.2"
   }
