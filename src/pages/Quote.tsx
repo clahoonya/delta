@@ -32,7 +32,12 @@ const Quote = () => {
     try {
       const message = `Product(s) interested in: ${formData.products}${formData.address ? `\nAddress: ${formData.address}` : ''}`;
       
-      const response = await fetch('/api/send-email', {
+      // Check if we're on Vercel deployment or local/preview
+      const apiUrl = window.location.hostname.includes('vercel.app') || window.location.hostname.includes('deltalife') 
+        ? '/api/send-email'
+        : 'https://delta-life-insurance.vercel.app/api/send-email';
+      
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,6 +62,7 @@ const Quote = () => {
         throw new Error('Failed to send quote request');
       }
     } catch (error) {
+      console.error('Quote submission error:', error);
       toast({
         title: "Error",
         description: "Failed to send quote request. Please try again.",
@@ -109,7 +115,7 @@ const Quote = () => {
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="John Doe"
                       required
-                      className="bg-white border-gray-300 text-black placeholder:text-gray-500"
+                      className="!bg-white !border-gray-300 !text-black placeholder:!text-gray-500"
                     />
                   </div>
 
@@ -120,7 +126,7 @@ const Quote = () => {
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                       placeholder="123 Main St, Atlanta, GA 30301"
-                      className="bg-white border-gray-300 text-black placeholder:text-gray-500"
+                      className="!bg-white !border-gray-300 !text-black placeholder:!text-gray-500"
                     />
                   </div>
 
@@ -133,24 +139,24 @@ const Quote = () => {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="john.doe@example.com"
                       required
-                      className="bg-white border-gray-300 text-black placeholder:text-gray-500"
+                      className="!bg-white !border-gray-300 !text-black placeholder:!text-gray-500"
                     />
                   </div>
 
                   <div>
                     <Label htmlFor="products" className="text-primary">Products Interested In *</Label>
                     <Select value={formData.products} onValueChange={(value) => setFormData({ ...formData, products: value })}>
-                      <SelectTrigger className="bg-white border-gray-300 text-black">
-                        <SelectValue placeholder="Select a product" className="text-gray-500" />
+                      <SelectTrigger className="!bg-white !border-gray-300 !text-black">
+                        <SelectValue placeholder="Select a product" />
                       </SelectTrigger>
-                      <SelectContent className="bg-white z-50">
-                        <SelectItem value="whole-life-classic" className="text-black">Delta Life Classic Preferred</SelectItem>
-                        <SelectItem value="whole-life-family" className="text-black">One Parent Family Policy</SelectItem>
-                        <SelectItem value="whole-life-graded" className="text-black">Graded Policy</SelectItem>
-                        <SelectItem value="whole-life-paidup" className="text-black">10/20-Year Paid Up</SelectItem>
-                        <SelectItem value="cancer" className="text-black">Cancer Insurance</SelectItem>
-                        <SelectItem value="property" className="text-black">Fire & Contents Insurance</SelectItem>
-                        <SelectItem value="multiple" className="text-black">Multiple Products</SelectItem>
+                      <SelectContent className="!bg-white !text-black z-[100]">
+                        <SelectItem value="whole-life-classic">Delta Life Classic Preferred</SelectItem>
+                        <SelectItem value="whole-life-family">One Parent Family Policy</SelectItem>
+                        <SelectItem value="whole-life-graded">Graded Policy</SelectItem>
+                        <SelectItem value="whole-life-paidup">10/20-Year Paid Up</SelectItem>
+                        <SelectItem value="cancer">Cancer Insurance</SelectItem>
+                        <SelectItem value="property">Fire & Contents Insurance</SelectItem>
+                        <SelectItem value="multiple">Multiple Products</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>

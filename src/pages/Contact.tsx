@@ -29,7 +29,12 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch('/api/send-email', {
+      // Check if we're on Vercel deployment or local/preview
+      const apiUrl = window.location.hostname.includes('vercel.app') || window.location.hostname.includes('deltalife') 
+        ? '/api/send-email'
+        : 'https://delta-life-insurance.vercel.app/api/send-email';
+      
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,6 +57,7 @@ const Contact = () => {
         throw new Error('Failed to send message');
       }
     } catch (error) {
+      console.error('Contact form error:', error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
