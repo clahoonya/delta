@@ -110,7 +110,7 @@ const Quote = () => {
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="John Doe"
                       required
-                      className="!bg-white !border-gray-300 !text-black placeholder:!text-gray-500"
+                      className="bg-white border-[#4a5f73] text-black placeholder:text-gray-500"
                     />
                   </div>
 
@@ -121,7 +121,7 @@ const Quote = () => {
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                       placeholder="123 Main St, Atlanta, GA 30301"
-                      className="!bg-white !border-gray-300 !text-black placeholder:!text-gray-500"
+                      className="bg-white border-[#4a5f73] text-black placeholder:text-gray-500"
                     />
                   </div>
 
@@ -134,17 +134,17 @@ const Quote = () => {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="john.doe@example.com"
                       required
-                      className="!bg-white !border-gray-300 !text-black placeholder:!text-gray-500"
+                      className="bg-white border-[#4a5f73] text-black placeholder:text-gray-500"
                     />
                   </div>
 
                   <div>
                     <Label htmlFor="products" className="text-primary">Products Interested In *</Label>
                     <Select value={formData.products} onValueChange={(value) => setFormData({ ...formData, products: value })}>
-                      <SelectTrigger className="!bg-white !border-gray-300 !text-black">
+                      <SelectTrigger className="bg-white border-[#4a5f73] text-black">
                         <SelectValue placeholder="Select a product" />
                       </SelectTrigger>
-                      <SelectContent className="!bg-white !text-black z-[100]">
+                      <SelectContent className="bg-white text-black z-[100]">
                         <SelectItem value="whole-life-classic">Delta Life Classic Preferred</SelectItem>
                         <SelectItem value="whole-life-family">One Parent Family Policy</SelectItem>
                         <SelectItem value="whole-life-graded">Graded Policy</SelectItem>

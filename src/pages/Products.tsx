@@ -3,11 +3,69 @@ import Footer from "@/components/layout/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 import familyPortrait from "@/assets/family-portrait.jpg";
 import insurancePlanning from "@/assets/insurance-planning.jpg";
 import familyHomeExterior from "@/assets/family-home-exterior.jpg";
 
 const Products = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    address: "",
+    products: ""
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.products) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    try {
+      const message = `Product(s) interested in: ${formData.products}${formData.address ? `\nAddress: ${formData.address}` : ''}`;
+
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message,
+          address: formData.address,
+          products: formData.products,
+          type: 'quote'
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Quote Request Received!",
+          description: "Thank you! An agent will contact you shortly with your personalized quote."
+        });
+        setFormData({ name: "", email: "", address: "", products: "" });
+      } else {
+        throw new Error('Failed to send quote request');
+      }
+    } catch (error) {
+      console.error('Quote submission error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send quote request. Please try again.",
+        variant: "destructive"
+      });
+    }
+  };
   const wholeLifeProducts = [
     {
       name: "Delta Life Classic Preferred",
@@ -192,30 +250,36 @@ const Products = () => {
                 </p>
               </div>
               
-              <form className="bg-white rounded-lg p-8 shadow-lg">
+              <form onSubmit={handleSubmit} className="bg-white rounded-lg p-8 shadow-lg">
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Name
+                      Name *
                     </label>
                     <input
                       type="text"
                       id="name"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent text-black"
+                      required
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email
+                      Email *
                     </label>
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent text-black"
+                      required
                     />
                   </div>
                 </div>
-                
+
                 <div className="mb-6">
                   <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-2">
                     Address
@@ -223,17 +287,22 @@ const Products = () => {
                   <input
                     type="text"
                     id="address"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                    value={formData.address}
+                    onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent text-black"
                   />
                 </div>
-                
+
                 <div className="mb-6">
                   <label htmlFor="products" className="block text-sm font-medium text-gray-700 mb-2">
-                    Products Interested In
+                    Products Interested In *
                   </label>
                   <select
                     id="products"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent"
+                    value={formData.products}
+                    onChange={(e) => setFormData({ ...formData, products: e.target.value })}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent text-black bg-white"
+                    required
                   >
                     <option value="">Select a product</option>
                     <option value="Delta Life Classic Preferred">Delta Life Classic Preferred</option>
@@ -244,9 +313,9 @@ const Products = () => {
                     <option value="Fire or Contents Insurance">Fire or Contents Insurance</option>
                   </select>
                 </div>
-                
+
                 <div className="text-center">
-                  <Button 
+                  <Button
                     type="submit"
                     size="lg"
                     className="px-12"
