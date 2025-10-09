@@ -45,7 +45,7 @@ export default async function handler(req, res) {
 
   try {
     const emailResult = await resend.emails.send({
-      from: 'Delta Life <onboarding@resend.dev>',
+      from: 'Delta Life <younghoon@levelthree.co>',
       to: 'younghoon@levelthree.co',
       subject,
       html: htmlContent,
