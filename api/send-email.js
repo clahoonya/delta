@@ -1,4 +1,5 @@
 // Vercel Function for sending emails via Resend API
+// Updated to use CommonJS for better compatibility
 const { Resend } = require('resend');
 
 // Initialize Resend with API key from environment variable
