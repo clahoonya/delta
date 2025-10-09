@@ -1,10 +1,27 @@
 import { Resend } from 'resend';
 
-const resend = new Resend('re_74ca7Trp_7mKqJqD8TXsMFwSfYUW8PAan');
+// Initialize Resend with API key from environment variable
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(req, res) {
+  // Add CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  // Handle OPTIONS request for CORS preflight
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  // Check if API key is configured
+  if (!process.env.RESEND_API_KEY) {
+    console.error('RESEND_API_KEY is not configured');
+    return res.status(500).json({ error: 'Email service not configured' });
   }
 
   const { name, email, message, type, address, products } = req.body;
@@ -27,16 +44,20 @@ export default async function handler(req, res) {
   htmlContent += `<p><strong>Message:</strong></p><p>${message.replace(/\n/g, '<br>')}</p>`;
 
   try {
-    await resend.emails.send({
+    const emailResult = await resend.emails.send({
       from: 'Delta Life <onboarding@resend.dev>',
       to: 'younghoon@levelthree.co',
       subject,
       html: htmlContent,
     });
     
+    console.log('Email sent successfully:', emailResult);
     res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Failed to send email' });
+    console.error('Email sending error:', error);
+    res.status(500).json({ 
+      error: 'Failed to send email',
+      details: error.message || 'Unknown error'
+    });
   }
 }
