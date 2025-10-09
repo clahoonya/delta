@@ -109,7 +109,8 @@ const Quote = () => {
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="John Doe"
                       required
-                      className="!bg-white !text-black placeholder:!text-gray-500 border-gray-300"
+                      style={{ backgroundColor: '#ffffff', color: '#000000' }}
+                      className="border-gray-300"
                     />
                   </div>
 
@@ -120,7 +121,8 @@ const Quote = () => {
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                       placeholder="123 Main St, Atlanta, GA 30301"
-                      className="!bg-white !text-black placeholder:!text-gray-500 border-gray-300"
+                      style={{ backgroundColor: '#ffffff', color: '#000000' }}
+                      className="border-gray-300"
                     />
                   </div>
 
@@ -133,24 +135,25 @@ const Quote = () => {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="john.doe@example.com"
                       required
-                      className="!bg-white !text-black placeholder:!text-gray-500 border-gray-300"
+                      style={{ backgroundColor: '#ffffff', color: '#000000' }}
+                      className="border-gray-300"
                     />
                   </div>
 
                   <div>
                     <Label htmlFor="products" className="text-primary">Products Interested In *</Label>
                     <Select value={formData.products} onValueChange={(value) => setFormData({ ...formData, products: value })}>
-                      <SelectTrigger className="!bg-white !text-black border-gray-300">
-                        <SelectValue placeholder="Select a product" className="!text-black" />
+                      <SelectTrigger style={{ backgroundColor: '#ffffff', color: '#000000' }} className="border-gray-300">
+                        <SelectValue placeholder="Select a product" />
                       </SelectTrigger>
-                      <SelectContent className="!bg-white z-50">
-                        <SelectItem value="whole-life-classic" className="!text-black hover:!bg-gray-100">Delta Life Classic Preferred</SelectItem>
-                        <SelectItem value="whole-life-family" className="!text-black hover:!bg-gray-100">One Parent Family Policy</SelectItem>
-                        <SelectItem value="whole-life-graded" className="!text-black hover:!bg-gray-100">Graded Policy</SelectItem>
-                        <SelectItem value="whole-life-paidup" className="!text-black hover:!bg-gray-100">10/20-Year Paid Up</SelectItem>
-                        <SelectItem value="cancer" className="!text-black hover:!bg-gray-100">Cancer Insurance</SelectItem>
-                        <SelectItem value="property" className="!text-black hover:!bg-gray-100">Fire & Contents Insurance</SelectItem>
-                        <SelectItem value="multiple" className="!text-black hover:!bg-gray-100">Multiple Products</SelectItem>
+                      <SelectContent style={{ backgroundColor: '#ffffff' }} className="z-50">
+                        <SelectItem value="whole-life-classic" style={{ color: '#000000' }}>Delta Life Classic Preferred</SelectItem>
+                        <SelectItem value="whole-life-family" style={{ color: '#000000' }}>One Parent Family Policy</SelectItem>
+                        <SelectItem value="whole-life-graded" style={{ color: '#000000' }}>Graded Policy</SelectItem>
+                        <SelectItem value="whole-life-paidup" style={{ color: '#000000' }}>10/20-Year Paid Up</SelectItem>
+                        <SelectItem value="cancer" style={{ color: '#000000' }}>Cancer Insurance</SelectItem>
+                        <SelectItem value="property" style={{ color: '#000000' }}>Fire & Contents Insurance</SelectItem>
+                        <SelectItem value="multiple" style={{ color: '#000000' }}>Multiple Products</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
