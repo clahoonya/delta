@@ -109,8 +109,7 @@ const Quote = () => {
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="John Doe"
                       required
-                      style={{ backgroundColor: '#ffffff', color: '#000000' }}
-                      className="border-gray-300"
+                      className="bg-white border-gray-300 text-black placeholder:text-gray-500"
                     />
                   </div>
 
@@ -121,8 +120,7 @@ const Quote = () => {
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                       placeholder="123 Main St, Atlanta, GA 30301"
-                      style={{ backgroundColor: '#ffffff', color: '#000000' }}
-                      className="border-gray-300"
+                      className="bg-white border-gray-300 text-black placeholder:text-gray-500"
                     />
                   </div>
 
@@ -135,25 +133,24 @@ const Quote = () => {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="john.doe@example.com"
                       required
-                      style={{ backgroundColor: '#ffffff', color: '#000000' }}
-                      className="border-gray-300"
+                      className="bg-white border-gray-300 text-black placeholder:text-gray-500"
                     />
                   </div>
 
                   <div>
                     <Label htmlFor="products" className="text-primary">Products Interested In *</Label>
                     <Select value={formData.products} onValueChange={(value) => setFormData({ ...formData, products: value })}>
-                      <SelectTrigger style={{ backgroundColor: '#ffffff', color: '#000000' }} className="border-gray-300">
-                        <SelectValue placeholder="Select a product" />
+                      <SelectTrigger className="bg-white border-gray-300 text-black">
+                        <SelectValue placeholder="Select a product" className="text-gray-500" />
                       </SelectTrigger>
-                      <SelectContent style={{ backgroundColor: '#ffffff' }} className="z-50">
-                        <SelectItem value="whole-life-classic" style={{ color: '#000000' }}>Delta Life Classic Preferred</SelectItem>
-                        <SelectItem value="whole-life-family" style={{ color: '#000000' }}>One Parent Family Policy</SelectItem>
-                        <SelectItem value="whole-life-graded" style={{ color: '#000000' }}>Graded Policy</SelectItem>
-                        <SelectItem value="whole-life-paidup" style={{ color: '#000000' }}>10/20-Year Paid Up</SelectItem>
-                        <SelectItem value="cancer" style={{ color: '#000000' }}>Cancer Insurance</SelectItem>
-                        <SelectItem value="property" style={{ color: '#000000' }}>Fire & Contents Insurance</SelectItem>
-                        <SelectItem value="multiple" style={{ color: '#000000' }}>Multiple Products</SelectItem>
+                      <SelectContent className="bg-white z-50">
+                        <SelectItem value="whole-life-classic" className="text-black">Delta Life Classic Preferred</SelectItem>
+                        <SelectItem value="whole-life-family" className="text-black">One Parent Family Policy</SelectItem>
+                        <SelectItem value="whole-life-graded" className="text-black">Graded Policy</SelectItem>
+                        <SelectItem value="whole-life-paidup" className="text-black">10/20-Year Paid Up</SelectItem>
+                        <SelectItem value="cancer" className="text-black">Cancer Insurance</SelectItem>
+                        <SelectItem value="property" className="text-black">Fire & Contents Insurance</SelectItem>
+                        <SelectItem value="multiple" className="text-black">Multiple Products</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>

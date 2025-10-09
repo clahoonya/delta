@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Missing required fields: name, email, message' });
   }
 
-  const subject = type === 'quote' ? 'New Quote Request' : 'New Contact Message';
+  const subject = type === 'quote' ? 'Quotation Request' : 'Inquiry from Contact Us page';
   let htmlContent = `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p>`;
   
   if (address) {
