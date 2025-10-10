@@ -26,7 +26,7 @@ const ProductsOverview = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Products
           </h2>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
+          <p className="text-lg text-white/90 max-w-2xl mx-auto text-balance">
             Comprehensive insurance solutions tailored to protect what matters most to your family.
           </p>
         </div>
