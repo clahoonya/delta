@@ -39,7 +39,7 @@ const Careers = () => {
             <img
               src={careersImage}
               alt="Delta Life team members collaborating"
-              className="w-full h-full object-cover object-[center_60%]"
+              className="w-full h-full object-cover object-[center_40%]"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
           </div>
