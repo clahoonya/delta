@@ -59,9 +59,9 @@ const MissionValues = () => {
               return (
                 <div
                   key={index}
-                  className="bg-card p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                  className="bg-card p-6 rounded-lg shadow-md text-center"
                 >
-                  <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
                     <Icon className="w-6 h-6 text-secondary" />
                   </div>
                   <h3 className="text-lg font-semibold text-primary mb-2">

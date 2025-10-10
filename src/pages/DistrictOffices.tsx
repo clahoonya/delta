@@ -44,6 +44,78 @@ const DistrictOffices = () => {
           </div>
         </section>
 
+        {/* Office Address List */}
+        <section className="py-16 bg-background-soft">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                All Office Locations
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-card p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-primary mb-3">Albany Office</h3>
+                  <p className="text-muted-foreground mb-2">2101 Dawson Rd, Albany, GA 31707</p>
+                  <p className="text-muted-foreground">(229) 439-7021 • (800) 924-5433</p>
+                </div>
+                
+                <div className="bg-card p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-primary mb-3">Athens Office</h3>
+                  <p className="text-muted-foreground mb-2">2500 W Broad St Suite 501, Athens, GA 30606</p>
+                  <p className="text-muted-foreground">(706) 369-8032 • (800) 982-8321</p>
+                </div>
+                
+                <div className="bg-card p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-primary mb-3">Atlanta Office</h3>
+                  <p className="text-muted-foreground mb-2">4921 Jonesboro Rd Suite C, Forest Park, GA 30297</p>
+                  <p className="text-muted-foreground">(404) 361-4897 • (800) 254-1076</p>
+                </div>
+                
+                <div className="bg-card p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-primary mb-3">Augusta Office</h3>
+                  <p className="text-muted-foreground mb-2">1212 West Medical Park Rd, Augusta, GA 30909</p>
+                  <p className="text-muted-foreground">(706) 798-3244 • (800) 287-3244</p>
+                </div>
+                
+                <div className="bg-card p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-primary mb-3">Brunswick Office</h3>
+                  <p className="text-muted-foreground mb-2">3303 Norwich St, Brunswick, GA 31502</p>
+                  <p className="text-muted-foreground">(912) 265-0318 • (800) 675-0318</p>
+                </div>
+                
+                <div className="bg-card p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-primary mb-3">Douglas Office</h3>
+                  <p className="text-muted-foreground mb-2">810 North Madison Ave, Douglas, GA 31533</p>
+                  <p className="text-muted-foreground">(912) 384-3932 • (800) 725-3846</p>
+                </div>
+                
+                <div className="bg-card p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-primary mb-3">Dublin Office</h3>
+                  <p className="text-muted-foreground mb-2">120 Oak Street, Dublin, GA 31021</p>
+                  <p className="text-muted-foreground">(478) 272-1312 • (800) 865-0676</p>
+                </div>
+                
+                <div className="bg-card p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-primary mb-3">Macon Office</h3>
+                  <p className="text-muted-foreground mb-2">1314 Hardeman Ave, Macon, GA 31201</p>
+                  <p className="text-muted-foreground">(478) 745-7961 • (800) 616-0277</p>
+                </div>
+                
+                <div className="bg-card p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-primary mb-3">Savannah Office</h3>
+                  <p className="text-muted-foreground mb-2">2231 E Victory Dr, Savannah, GA 31414</p>
+                  <p className="text-muted-foreground">(912) 354-0996 • (800) 773-0996</p>
+                </div>
+                
+                <div className="bg-card p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-primary mb-3">Thomasville Office</h3>
+                  <p className="text-muted-foreground mb-2">444 E Jackson St, Thomasville, GA 31792</p>
+                  <p className="text-muted-foreground">(229) 226-9390 • (800) 281-9390</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Additional Info */}
         <section className="py-16 bg-background-accent">
           <div className="container mx-auto px-4">

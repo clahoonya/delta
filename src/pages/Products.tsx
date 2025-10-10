@@ -140,65 +140,87 @@ const Products = () => {
           </div>
         </section>
 
-        {/* Products Overview - Two Column Layout */}
+        {/* Products Overview - Whole Life Insurance Grid */}
         <section className="py-16 md:py-24 bg-background-subtle">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Whole Life Insurance</h2>
               
-              {/* Left Column: Whole Life Insurance */}
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Whole Life Insurance</h2>
-                
-                {/* Life Insurance Image */}
-                <div className="mb-6 rounded-lg overflow-hidden shadow-md">
-                  <img
-                    src={insurancePlanning}
-                    alt="Life insurance planning documents with family photos"
-                    className="w-full h-48 object-cover"
-                  />
-                </div>
-                
-                <div className="space-y-4">
-                  {wholeLifeProducts.map((product, index) => (
-                    <Card key={index} className="hover:shadow-lg transition-shadow">
-                      <CardHeader>
-                        <CardTitle className="text-xl">{product.name}</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-2 text-muted-foreground mb-4">
-                          {product.features.map((feature, idx) => (
-                            <li key={idx} className="flex items-start">
-                              <span className="mr-2">•</span>
-                              <span>{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        <Button variant="outline" size="sm" asChild>
-                          <a href={product.brochureUrl} download>
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Download Brochure
-                          </a>
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+              {/* Life Insurance Image */}
+              <div className="mb-8 rounded-lg overflow-hidden shadow-md max-w-4xl mx-auto">
+                <img
+                  src={insurancePlanning}
+                  alt="Life insurance planning documents with family photos"
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+              
+              {/* Grid Layout for Products */}
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
+                {wholeLifeProducts.slice(0, 4).map((product, index) => (
+                  <Card key={index} className="transition-shadow">
+                    <CardHeader>
+                      <CardTitle className="text-xl">{product.name}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2 text-muted-foreground mb-4">
+                        {product.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-start">
+                            <span className="mr-2">•</span>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={product.brochureUrl} download>
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Download Brochure
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
 
-              {/* Right Column: Fire or Contents Insurance */}
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 whitespace-nowrap">Fire or Contents Insurance</h2>
+              {/* 5th Product Centered */}
+              <div className="max-w-2xl mx-auto mb-16">
+                <Card className="transition-shadow">
+                  <CardHeader>
+                    <CardTitle className="text-xl">{wholeLifeProducts[4].name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-muted-foreground mb-4">
+                      {wholeLifeProducts[4].features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <span className="mr-2">•</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button variant="outline" size="sm" asChild>
+                      <a href={wholeLifeProducts[4].brochureUrl} download>
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Download Brochure
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Fire or Contents Insurance Section */}
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Fire or Contents Insurance</h2>
                 
                 {/* Fire Insurance Image */}
                 <div className="mb-6 rounded-lg overflow-hidden shadow-md">
                   <img
                     src={familyHomeExterior}
                     alt="Happy family in front of their protected home"
-                    className="w-full h-48 object-cover"
+                    className="w-full h-64 object-cover"
                   />
                 </div>
                 
-                <Card className="hover:shadow-lg transition-shadow h-fit">
+                <Card className="transition-shadow">
                   <CardContent className="pt-6">
                     <p className="text-muted-foreground mb-6">
                       Our property and casualty division provides comprehensive coverage for your home, auto, and personal property needs. We understand that protecting your assets is just as important as protecting your family's future.

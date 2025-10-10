@@ -43,7 +43,7 @@ const ProductsOverview = () => {
                   <CardTitle className="text-xl">{product.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base mb-4">
+                  <CardDescription className="text-base mb-4 leading-relaxed">
                     {product.description}
                   </CardDescription>
                   <Button asChild variant="outline" size="sm">

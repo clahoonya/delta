@@ -149,7 +149,7 @@ const Careers = () => {
               {categories.map((category, index) => {
                 const Icon = category.icon;
                 return (
-                  <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <Card key={index} className="card-hover">
                     <CardHeader className="text-center">
                       <div className="w-16 h-16 bg-secondary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
                         <Icon className="w-8 h-8 text-secondary" />

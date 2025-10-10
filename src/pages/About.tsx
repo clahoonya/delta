@@ -144,28 +144,28 @@ const About = () => {
                     Why Choose Delta Life?
                   </h2>
                   <div className="grid grid-cols-1 gap-6">
-                    <div className="bg-card p-6 rounded-lg shadow-md">
+                    <div className="bg-card p-6 rounded-lg shadow-md card-hover">
                       <h3 className="text-xl font-semibold text-primary mb-3">65+ Years of Stability</h3>
                       <p className="text-muted-foreground">
                         Decades of financial strength and proven reliability give you confidence that we'll be 
                         here when your family needs us most.
                       </p>
                     </div>
-                    <div className="bg-card p-6 rounded-lg shadow-md">
+                    <div className="bg-card p-6 rounded-lg shadow-md card-hover">
                       <h3 className="text-xl font-semibold text-primary mb-3">Personal Service</h3>
                       <p className="text-muted-foreground">
                         Our agents come to you, building lasting relationships and providing the individualized 
                         attention your family deserves.
                       </p>
                     </div>
-                    <div className="bg-card p-6 rounded-lg shadow-md">
+                    <div className="bg-card p-6 rounded-lg shadow-md card-hover">
                       <h3 className="text-xl font-semibold text-primary mb-3">Georgia-Focused</h3>
                       <p className="text-muted-foreground">
                         As a company exclusively serving Georgia, we understand the unique needs of our 
                         communities and are deeply invested in their well-being.
                       </p>
                     </div>
-                    <div className="bg-card p-6 rounded-lg shadow-md">
+                    <div className="bg-card p-6 rounded-lg shadow-md card-hover">
                       <h3 className="text-xl font-semibold text-primary mb-3">Family Owned</h3>
                       <p className="text-muted-foreground">
                         Our family-owned structure means we can prioritize long-term relationships over 

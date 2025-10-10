@@ -16,7 +16,19 @@ const FAQs = () => {
     },
     {
       question: "What are the key benefits of Home Service Life Insurance?",
-      answer: "1. Personalized Service: A dedicated agent builds a relationship with you and your family, providing trusted face-to-face support. 2. Convenience: Premiums can be collected at your home or workplace, helpful for those without reliable access to banks or online payments. 3. Accessibility: Provides coverage to working-class families, rural areas, and people who may not be targeted by traditional insurance channels. 4. Education and Guidance: Your agent explains coverage in plain language and helps with paperwork, providing hands-on support during the claims process. 5. Affordable Policies: Smaller face-value policies ($1,000-$25,000) designed for final expenses. 6. Trust and Accountability: Regular visits create accountability and visibility in the community."
+      answer: `Key benefits include:
+
+1. Personalized Service: A dedicated agent builds a relationship with you and your family, providing trusted face-to-face support.
+
+2. Convenience: Premiums can be collected at your home or workplace, helpful for those without reliable access to banks or online payments.
+
+3. Accessibility: Provides coverage to working-class families, rural areas, and people who may not be targeted by traditional insurance channels.
+
+4. Education and Guidance: Your agent explains coverage in plain language and helps with paperwork, providing hands-on support during the claims process.
+
+5. Affordable Policies: Smaller face-value policies ($1,000-$25,000) designed for final expenses.
+
+6. Trust and Accountability: Regular visits create accountability and visibility in the community.`
     },
     {
       question: "What are final expenses and why are they important?",
@@ -78,7 +90,7 @@ const FAQs = () => {
                     <AccordionTrigger className="text-left font-semibold text-primary hover:no-underline">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
+                    <AccordionContent className="text-muted-foreground whitespace-pre-line">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
