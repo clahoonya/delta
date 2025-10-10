@@ -54,7 +54,7 @@ const FAQs = () => {
             <img
               src={familyReading}
               alt="Family reading together - representing education and informed decisions"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-[center_60%]"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
           </div>
