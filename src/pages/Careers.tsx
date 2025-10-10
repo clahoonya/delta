@@ -9,8 +9,13 @@ const Careers = () => {
   const categories = [
     {
       icon: Briefcase,
-      title: "Administrative",
+      title: "Administrative Support",
       description: "Support roles keeping our operations running smoothly"
+    },
+    {
+      icon: TrendingUp,
+      title: "Business / Data Analysis",
+      description: "Analyze data and provide insights to drive business decisions"
     },
     {
       icon: FileText,
@@ -19,13 +24,48 @@ const Careers = () => {
     },
     {
       icon: Users,
+      title: "Customer Service / Operations",
+      description: "Deliver exceptional service and operational excellence"
+    },
+    {
+      icon: Briefcase,
+      title: "Finance / Accounting",
+      description: "Manage financial operations and ensure fiscal responsibility"
+    },
+    {
+      icon: Users,
+      title: "Human Resources",
+      description: "Support employee growth and organizational development"
+    },
+    {
+      icon: TrendingUp,
+      title: "Information Technology",
+      description: "Drive innovation and maintain our technology infrastructure"
+    },
+    {
+      icon: FileText,
+      title: "Legal Jobs",
+      description: "Provide legal guidance and ensure compliance"
+    },
+    {
+      icon: TrendingUp,
+      title: "Marketing and Communications",
+      description: "Build our brand and connect with communities"
+    },
+    {
+      icon: Users,
       title: "Sales",
       description: "Build relationships and protect families in your community"
     },
     {
-      icon: TrendingUp,
-      title: "Management",
-      description: "Lead teams and drive excellence across our organization"
+      icon: Briefcase,
+      title: "Product Management",
+      description: "Shape our insurance products and service offerings"
+    },
+    {
+      icon: Users,
+      title: "Students",
+      description: "Start your career with internship and entry-level opportunities"
     }
   ];
 
@@ -39,7 +79,7 @@ const Careers = () => {
             <img
               src={careersImage}
               alt="Delta Life team members collaborating"
-              className="w-full h-full object-cover object-[center_40%]"
+              className="w-full h-full object-cover object-[center_30%]"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
           </div>
@@ -105,7 +145,7 @@ const Careers = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
               Explore Career Opportunities
             </h2>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {categories.map((category, index) => {
                 const Icon = category.icon;
                 return (

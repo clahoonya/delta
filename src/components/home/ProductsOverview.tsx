@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { FileText, Heart, Home } from "lucide-react";
+import { FileText, Home } from "lucide-react";
 
 const ProductsOverview = () => {
   const products = [
@@ -12,14 +12,8 @@ const ProductsOverview = () => {
       link: "/products#whole-life"
     },
     {
-      icon: Heart,
-      title: "Cancer Insurance",
-      description: "Specialized coverage to help protect your family from the financial burden of cancer treatment.",
-      link: "/products#cancer"
-    },
-    {
       icon: Home,
-      title: "Fire & Contents Insurance",
+      title: "Fire or Contents Insurance",
       description: "Protect your home and belongings with comprehensive property insurance coverage.",
       link: "/products#fire-contents"
     }
@@ -37,7 +31,7 @@ const ProductsOverview = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
           {products.map((product, index) => {
             const Icon = product.icon;
             return (

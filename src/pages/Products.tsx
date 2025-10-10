@@ -134,8 +134,8 @@ const Products = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
               Our Insurance Products
             </h1>
-            <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
-              Comprehensive protection for every stage of life
+            <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
+              Experience the personal touch of home service insurance. We bring whole life insurance directly to your door—building lasting coverage through face-to-face relationships. Serving families across Georgia with protection that grows cash value while securing your family's future.
             </p>
           </div>
         </section>
