@@ -150,14 +150,14 @@ const Careers = () => {
                 const Icon = category.icon;
                 return (
                   <Card key={index} className="hover:shadow-lg transition-shadow">
-                    <CardHeader>
-                      <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mb-2">
-                        <Icon className="w-6 h-6 text-secondary" />
+                    <CardHeader className="text-center">
+                      <div className="w-16 h-16 bg-secondary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                        <Icon className="w-8 h-8 text-secondary" />
                       </div>
-                      <CardTitle className="text-xl">{category.title}</CardTitle>
+                      <CardTitle className="text-lg">{category.title}</CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">{category.description}</p>
+                    <CardContent className="text-center">
+                      <p className="text-muted-foreground text-sm">{category.description}</p>
                     </CardContent>
                   </Card>
                 );
