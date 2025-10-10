@@ -33,13 +33,13 @@ const MissionValues = () => {
             Our Mission & Vision
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-card p-8 rounded-lg shadow-md">
+            <div className="bg-card p-8 rounded-lg shadow-md card-hover">
               <h3 className="text-2xl font-semibold text-primary mb-4">Mission</h3>
               <p className="text-muted-foreground">
                 We provide financial security and protection for Georgia families through our trusted insurance products and personal service.
               </p>
             </div>
-            <div className="bg-card p-8 rounded-lg shadow-md">
+            <div className="bg-card p-8 rounded-lg shadow-md card-hover">
               <h3 className="text-2xl font-semibold text-primary mb-4">Vision</h3>
               <p className="text-muted-foreground">
                 Our vision is to be the leading provider of insurance products to safeguard the financial future of those we service.
@@ -59,7 +59,7 @@ const MissionValues = () => {
               return (
                 <div
                   key={index}
-                  className="bg-card p-6 rounded-lg shadow-md text-center"
+                  className="bg-card p-6 rounded-lg shadow-md text-center card-hover"
                 >
                   <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
                     <Icon className="w-6 h-6 text-secondary" />

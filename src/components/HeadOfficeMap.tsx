@@ -72,48 +72,12 @@ const HeadOfficeMap = () => {
   }, []);
 
   return (
-    <Card className="w-full shadow-lg">
-      <CardHeader className="border-b">
-        <CardTitle className="text-2xl">Head Office Location</CardTitle>
-      </CardHeader>
-      <CardContent className="p-6 space-y-6">
-        <div 
-          ref={mapRef}
-          id="headOfficeMap" 
-          className="w-full h-[300px] rounded-lg overflow-hidden border"
-          style={{ zIndex: 1 }}
-        />
-        
-        {/* Office Details */}
-        <div className="space-y-4">
-          <div>
-            <h3 className="text-sm font-semibold text-gray-600 uppercase tracking-wide mb-2">
-              Address
-            </h3>
-            <div className="flex items-start gap-3">
-              <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-              <p className="text-lg font-medium text-gray-900">
-                {headOffice.fullAddress}
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-gray-600 uppercase tracking-wide mb-2">
-              Phone
-            </h3>
-            <div className="flex items-center gap-3">
-              <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-              <p className="text-lg text-gray-900">
-                <a href={`tel:${headOffice.phone.replace(/\D/g, '')}`} className="hover:text-primary transition-colors">
-                  {headOffice.phone}
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
+    <div 
+      ref={mapRef}
+      id="headOfficeMap" 
+      className="w-full h-[250px] rounded-lg overflow-hidden border border-white/20"
+      style={{ zIndex: 1 }}
+    />
   );
 };
 

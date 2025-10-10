@@ -148,6 +148,11 @@ const Contact = () => {
                     <p className="pt-2">404-231-2111</p>
                   </div>
                   
+                  {/* Map Section */}
+                  <div className="mb-6">
+                    <HeadOfficeMap />
+                  </div>
+                  
                   <div className="pt-6 border-t border-white/20">
                     <p className="text-white/90 mb-4">Looking for another location?</p>
                     <Button asChild variant="outline" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20">
@@ -162,14 +167,6 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Map Section */}
-        <section className="py-16 md:py-24 bg-background-subtle">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <HeadOfficeMap />
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
