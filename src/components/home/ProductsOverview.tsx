@@ -35,9 +35,9 @@ const ProductsOverview = () => {
           {products.map((product, index) => {
             const Icon = product.icon;
             return (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-shadow text-center">
                 <CardHeader>
-                  <div className="w-14 h-14 bg-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 bg-secondary/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
                     <Icon className="w-7 h-7 text-secondary" />
                   </div>
                   <CardTitle className="text-xl">{product.title}</CardTitle>

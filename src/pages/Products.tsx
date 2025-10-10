@@ -158,14 +158,14 @@ const Products = () => {
               {/* Grid Layout for Products */}
               <div className="grid md:grid-cols-2 gap-6 mb-12">
                 {wholeLifeProducts.slice(0, 4).map((product, index) => (
-                  <Card key={index} className="transition-shadow">
+                  <Card key={index} className="transition-shadow text-center">
                     <CardHeader>
                       <CardTitle className="text-xl">{product.name}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <ul className="space-y-2 text-muted-foreground mb-4">
                         {product.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start">
+                          <li key={idx} className="flex items-start justify-center">
                             <span className="mr-2">•</span>
                             <span>{feature}</span>
                           </li>
@@ -184,14 +184,14 @@ const Products = () => {
 
               {/* 5th Product Centered */}
               <div className="max-w-2xl mx-auto mb-16">
-                <Card className="transition-shadow">
+                <Card className="transition-shadow text-center">
                   <CardHeader>
                     <CardTitle className="text-xl">{wholeLifeProducts[4].name}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 text-muted-foreground mb-4">
                       {wholeLifeProducts[4].features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start">
+                        <li key={idx} className="flex items-start justify-center">
                           <span className="mr-2">•</span>
                           <span>{feature}</span>
                         </li>
@@ -220,29 +220,29 @@ const Products = () => {
                   />
                 </div>
                 
-                <Card className="transition-shadow">
+                <Card className="transition-shadow text-center">
                   <CardContent className="pt-6">
                     <p className="text-muted-foreground mb-6">
                       Our property and casualty division provides comprehensive coverage for your home, auto, and personal property needs. We understand that protecting your assets is just as important as protecting your family's future.
                     </p>
                     <ul className="space-y-3 text-muted-foreground mb-6">
-                      <li className="flex items-start">
+                      <li className="flex items-center justify-center">
                         <span className="text-secondary mr-2">✓</span>
                         <span>Homeowners Insurance</span>
                       </li>
-                      <li className="flex items-start">
+                      <li className="flex items-center justify-center">
                         <span className="text-secondary mr-2">✓</span>
                         <span>Cancer Insurance</span>
                       </li>
-                      <li className="flex items-start">
+                      <li className="flex items-center justify-center">
                         <span className="text-secondary mr-2">✓</span>
                         <span>Auto Insurance</span>
                       </li>
-                      <li className="flex items-start">
+                      <li className="flex items-center justify-center">
                         <span className="text-secondary mr-2">✓</span>
                         <span>Personal Property Coverage</span>
                       </li>
-                      <li className="flex items-start">
+                      <li className="flex items-center justify-center">
                         <span className="text-secondary mr-2">✓</span>
                         <span>Liability Protection</span>
                       </li>

@@ -82,7 +82,7 @@ const About = () => {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <div className="bg-card p-6 rounded-lg shadow-md">
+                <div className="bg-card p-6 rounded-lg shadow-md text-center">
                   <h3 className="text-lg font-semibold text-primary mb-3">Personalized Service</h3>
                   <p className="text-muted-foreground">
                     A dedicated agent builds a relationship with you and your family. Your agent lives in or near your community, 
@@ -90,7 +90,7 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="bg-card p-6 rounded-lg shadow-md">
+                <div className="bg-card p-6 rounded-lg shadow-md text-center">
                   <h3 className="text-lg font-semibold text-primary mb-3">Convenience</h3>
                   <p className="text-muted-foreground">
                     Premiums are collected at your home or workplace, helpful for people without reliable access to banks or online 
@@ -98,7 +98,7 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="bg-card p-6 rounded-lg shadow-md">
+                <div className="bg-card p-6 rounded-lg shadow-md text-center">
                   <h3 className="text-lg font-semibold text-primary mb-3">Accessibility for All</h3>
                   <p className="text-muted-foreground">
                     Home service has historically provided coverage to working-class families, rural areas, and people who may not 
@@ -106,7 +106,7 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="bg-card p-6 rounded-lg shadow-md">
+                <div className="bg-card p-6 rounded-lg shadow-md text-center">
                   <h3 className="text-lg font-semibold text-primary mb-3">Education & Guidance</h3>
                   <p className="text-muted-foreground">
                     Your agent explains coverage in plain language and helps with paperwork. Beneficiaries receive hands-on support 
@@ -114,7 +114,7 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="bg-card p-6 rounded-lg shadow-md">
+                <div className="bg-card p-6 rounded-lg shadow-md text-center">
                   <h3 className="text-lg font-semibold text-primary mb-3">Affordable Coverage</h3>
                   <p className="text-muted-foreground">
                     Many home service policies are structured as smaller face-value policies ($1,000–$25,000), making them more 
@@ -122,7 +122,7 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="bg-card p-6 rounded-lg shadow-md">
+                <div className="bg-card p-6 rounded-lg shadow-md text-center">
                   <h3 className="text-lg font-semibold text-primary mb-3">Trust & Accountability</h3>
                   <p className="text-muted-foreground">
                     Regular visits create accountability—you know who your agent is, and we maintain visibility in your community, 
@@ -144,28 +144,28 @@ const About = () => {
                     Why Choose Delta Life?
                   </h2>
                   <div className="grid grid-cols-1 gap-6">
-                    <div className="bg-card p-6 rounded-lg shadow-md card-hover">
+                    <div className="bg-card p-6 rounded-lg shadow-md card-hover text-center">
                       <h3 className="text-xl font-semibold text-primary mb-3">65+ Years of Stability</h3>
                       <p className="text-muted-foreground">
                         Decades of financial strength and proven reliability give you confidence that we'll be 
                         here when your family needs us most.
                       </p>
                     </div>
-                    <div className="bg-card p-6 rounded-lg shadow-md card-hover">
+                    <div className="bg-card p-6 rounded-lg shadow-md card-hover text-center">
                       <h3 className="text-xl font-semibold text-primary mb-3">Personal Service</h3>
                       <p className="text-muted-foreground">
                         Our agents come to you, building lasting relationships and providing the individualized 
                         attention your family deserves.
                       </p>
                     </div>
-                    <div className="bg-card p-6 rounded-lg shadow-md card-hover">
+                    <div className="bg-card p-6 rounded-lg shadow-md card-hover text-center">
                       <h3 className="text-xl font-semibold text-primary mb-3">Georgia-Focused</h3>
                       <p className="text-muted-foreground">
                         As a company exclusively serving Georgia, we understand the unique needs of our 
                         communities and are deeply invested in their well-being.
                       </p>
                     </div>
-                    <div className="bg-card p-6 rounded-lg shadow-md card-hover">
+                    <div className="bg-card p-6 rounded-lg shadow-md card-hover text-center">
                       <h3 className="text-xl font-semibold text-primary mb-3">Family Owned</h3>
                       <p className="text-muted-foreground">
                         Our family-owned structure means we can prioritize long-term relationships over 
