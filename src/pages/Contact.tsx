@@ -93,7 +93,7 @@ const Contact = () => {
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12">
                 {/* Left Column - Contact Form */}
-                <div>
+                <div className="order-2 md:order-1">
                   <h2 className="text-3xl font-bold text-white mb-8">Send Us a Message</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
@@ -138,8 +138,13 @@ const Contact = () => {
                   </form>
                 </div>
 
-                {/* Right Column - Head Office Info */}
-                <div>
+                {/* Right Column - Map and Head Office Info */}
+                <div className="order-1 md:order-2">
+                  {/* Map Section */}
+                  <div className="mb-6">
+                    <HeadOfficeMap />
+                  </div>
+
                   <h2 className="text-3xl font-bold text-white mb-8">Head Office</h2>
                   <div className="text-white/90 space-y-4 mb-8">
                     <p className="text-lg font-semibold">Delta Life Insurance Company</p>
@@ -147,12 +152,7 @@ const Contact = () => {
                     <p>Atlanta, GA 30319</p>
                     <p className="pt-2">404-231-2111</p>
                   </div>
-                  
-                  {/* Map Section */}
-                  <div className="mb-6">
-                    <HeadOfficeMap />
-                  </div>
-                  
+
                   <div className="pt-6 border-t border-white/20">
                     <p className="text-white/90 mb-4">Looking for another location?</p>
                     <Button asChild variant="outline" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20">
