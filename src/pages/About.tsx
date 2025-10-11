@@ -82,50 +82,50 @@ const About = () => {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <div className="bg-card p-6 rounded-lg shadow-md text-center">
+                <div className="bg-card p-6 rounded-lg shadow-md card-hover text-center">
                   <h3 className="text-lg font-semibold text-primary mb-3">Personalized Service</h3>
                   <p className="text-muted-foreground">
-                    A dedicated agent builds a relationship with you and your family. Your agent lives in or near your community, 
+                    A dedicated agent builds a relationship with you and your family. Your agent lives in or near your community,
                     providing a trusted, face-to-face resource who understands your needs.
                   </p>
                 </div>
 
-                <div className="bg-card p-6 rounded-lg shadow-md text-center">
+                <div className="bg-card p-6 rounded-lg shadow-md card-hover text-center">
                   <h3 className="text-lg font-semibold text-primary mb-3">Convenience</h3>
                   <p className="text-muted-foreground">
-                    Premiums are collected at your home or workplace, helpful for people without reliable access to banks or online 
+                    Premiums are collected at your home or workplace, helpful for people without reliable access to banks or online
                     payments, or who simply prefer in-person transactions.
                   </p>
                 </div>
 
-                <div className="bg-card p-6 rounded-lg shadow-md text-center">
+                <div className="bg-card p-6 rounded-lg shadow-md card-hover text-center">
                   <h3 className="text-lg font-semibold text-primary mb-3">Accessibility for All</h3>
                   <p className="text-muted-foreground">
-                    Home service has historically provided coverage to working-class families, rural areas, and people who may not 
+                    Home service has historically provided coverage to working-class families, rural areas, and people who may not
                     be targeted by traditional insurance channels, helping everyone gain the protection they need.
                   </p>
                 </div>
 
-                <div className="bg-card p-6 rounded-lg shadow-md text-center">
+                <div className="bg-card p-6 rounded-lg shadow-md card-hover text-center">
                   <h3 className="text-lg font-semibold text-primary mb-3">Education & Guidance</h3>
                   <p className="text-muted-foreground">
-                    Your agent explains coverage in plain language and helps with paperwork. Beneficiaries receive hands-on support 
+                    Your agent explains coverage in plain language and helps with paperwork. Beneficiaries receive hands-on support
                     during the claims process—a major relief during difficult times.
                   </p>
                 </div>
 
-                <div className="bg-card p-6 rounded-lg shadow-md text-center">
+                <div className="bg-card p-6 rounded-lg shadow-md card-hover text-center">
                   <h3 className="text-lg font-semibold text-primary mb-3">Affordable Coverage</h3>
                   <p className="text-muted-foreground">
-                    Many home service policies are structured as smaller face-value policies ($1,000–$25,000), making them more 
+                    Many home service policies are structured as smaller face-value policies ($1,000–$25,000), making them more
                     affordable for families on a budget, often intended for final expenses.
                   </p>
                 </div>
 
-                <div className="bg-card p-6 rounded-lg shadow-md text-center">
+                <div className="bg-card p-6 rounded-lg shadow-md card-hover text-center">
                   <h3 className="text-lg font-semibold text-primary mb-3">Trust & Accountability</h3>
                   <p className="text-muted-foreground">
-                    Regular visits create accountability—you know who your agent is, and we maintain visibility in your community, 
+                    Regular visits create accountability—you know who your agent is, and we maintain visibility in your community,
                     building lasting trust.
                   </p>
                 </div>
