@@ -64,28 +64,19 @@ const DistrictOffices = () => {
                     <p className="text-muted-foreground">(229) 439-7021 • (800) 924-5433</p>
                   </div>
                 </div>
-                
-                <div className="bg-card p-6 rounded-lg shadow-md card-hover">
-                  <h3 className="text-xl font-semibold text-primary mb-3">Athens Office</h3>
+
+                <div className="bg-amber-50 border-2 border-amber-500 p-6 rounded-lg shadow-md card-hover relative">
+                  <div className="absolute top-2 right-2">
+                    <span className="inline-block px-2 py-1 text-xs font-bold text-white bg-amber-500 rounded">HQ</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-amber-600 mb-3">Atlanta Office</h3>
                   <div className="flex items-start gap-2 mb-2">
-                    <MapPin className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                    <p className="text-muted-foreground">2500 W Broad St Suite 501, Athens, GA 30606</p>
+                    <MapPin className="h-4 w-4 text-amber-600 mt-1 flex-shrink-0" />
+                    <p className="text-gray-700">4921 Jonesboro Rd Suite C, Forest Park, GA 30297</p>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                    <p className="text-muted-foreground">(706) 369-8032 • (800) 982-8321</p>
-                  </div>
-                </div>
-                
-                <div className="bg-card p-6 rounded-lg shadow-md card-hover">
-                  <h3 className="text-xl font-semibold text-primary mb-3">Atlanta Office</h3>
-                  <div className="flex items-start gap-2 mb-2">
-                    <MapPin className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                    <p className="text-muted-foreground">4921 Jonesboro Rd Suite C, Forest Park, GA 30297</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                    <p className="text-muted-foreground">(404) 361-4897 • (800) 254-1076</p>
+                    <Phone className="h-4 w-4 text-amber-600 flex-shrink-0" />
+                    <p className="text-gray-700">(404) 361-4897 • (800) 254-1076</p>
                   </div>
                 </div>
                 
@@ -100,19 +91,7 @@ const DistrictOffices = () => {
                     <p className="text-muted-foreground">(706) 798-3244 • (800) 287-3244</p>
                   </div>
                 </div>
-                
-                <div className="bg-card p-6 rounded-lg shadow-md card-hover">
-                  <h3 className="text-xl font-semibold text-primary mb-3">Brunswick Office</h3>
-                  <div className="flex items-start gap-2 mb-2">
-                    <MapPin className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                    <p className="text-muted-foreground">3303 Norwich St, Brunswick, GA 31502</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                    <p className="text-muted-foreground">(912) 265-0318 • (800) 675-0318</p>
-                  </div>
-                </div>
-                
+
                 <div className="bg-card p-6 rounded-lg shadow-md card-hover">
                   <h3 className="text-xl font-semibold text-primary mb-3">Douglas Office</h3>
                   <div className="flex items-start gap-2 mb-2">

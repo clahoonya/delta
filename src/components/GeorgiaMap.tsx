@@ -1,9 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { X, MapPin, Phone } from "lucide-react";
-import athensImage from "@/assets/offices/athens.png";
 import atlantaImage from "@/assets/offices/atlanta.png";
-import brunswickImage from "@/assets/offices/brunswick.png";
 import albanyImage from "@/assets/offices/albany.jpg";
 import augustaImage from "@/assets/offices/augusta.jpg";
 import douglasImage from "@/assets/offices/douglas.jpg";
@@ -23,6 +21,7 @@ interface Office {
   lat: number;
   lng: number;
   image: string;
+  isHQ?: boolean;
 }
 
 const offices: Office[] = [
@@ -39,18 +38,6 @@ const offices: Office[] = [
     image: albanyImage,
   },
   {
-    id: 2,
-    name: "Athens Office",
-    city: "Athens",
-    address: "2500 W Broad St Suite 501",
-    fullAddress: "2500 W Broad St Suite 501, Athens, GA 30606",
-    phone1: "(706) 369-8032",
-    phone2: "(800) 982-8321",
-    lat: 33.971,
-    lng: -83.415,
-    image: athensImage,
-  },
-  {
     id: 3,
     name: "Atlanta Office",
     city: "Atlanta",
@@ -61,6 +48,7 @@ const offices: Office[] = [
     lat: 33.616,
     lng: -84.366,
     image: atlantaImage,
+    isHQ: true,
   },
   {
     id: 4,
@@ -73,18 +61,6 @@ const offices: Office[] = [
     lat: 33.455,
     lng: -82.046,
     image: augustaImage,
-  },
-  {
-    id: 5,
-    name: "Brunswick Office",
-    city: "Brunswick",
-    address: "3303 Norwich St",
-    fullAddress: "3303 Norwich St, Brunswick, GA 31502",
-    phone1: "(912) 265-0318",
-    phone2: "(800) 675-0318",
-    lat: 31.157,
-    lng: -81.492,
-    image: brunswickImage,
   },
   {
     id: 6,
@@ -183,10 +159,22 @@ const GeorgiaMap = () => {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           }).addTo(map);
 
+          // Define custom icon for headquarters
+          const hqIcon = L.divIcon({
+            className: 'custom-hq-marker',
+            html: '<div style="background-color: #f59e0b; width: 25px; height: 41px; position: relative; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"><div style="position: absolute; width: 10px; height: 10px; background: white; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg);"></div></div>',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+          });
+
           // Place markers for each office location
           offices.forEach(office => {
-            const marker = L.marker([office.lat, office.lng]).addTo(map);
-            marker.bindPopup(`<strong>${office.name}</strong><br>${office.address}`);
+            // Use special gold icon for headquarters, default blue for others
+            const markerIcon = office.isHQ ? hqIcon : undefined;
+            const marker = L.marker([office.lat, office.lng], markerIcon ? { icon: markerIcon } : {}).addTo(map);
+
+            const popupLabel = office.isHQ ? `<strong>${office.name} (Headquarters)</strong><br>${office.address}` : `<strong>${office.name}</strong><br>${office.address}`;
+            marker.bindPopup(popupLabel);
 
             // Display info popup when hovering over marker
             marker.on('mouseover', function() {
@@ -254,6 +242,11 @@ const GeorgiaMap = () => {
               </button>
               <CardTitle className="text-2xl text-primary pr-8">
                 {selectedOffice.city} Office
+                {selectedOffice.isHQ && (
+                  <span className="ml-3 inline-block px-3 py-1 text-sm font-semibold text-white bg-amber-500 rounded-full">
+                    Headquarters
+                  </span>
+                )}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
