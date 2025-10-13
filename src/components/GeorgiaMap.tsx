@@ -159,17 +159,19 @@ const GeorgiaMap = () => {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           }).addTo(map);
 
-          // Define custom icon for headquarters
-          const hqIcon = L.divIcon({
-            className: 'custom-hq-marker',
-            html: '<div style="background-color: #f59e0b; width: 25px; height: 41px; position: relative; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"><div style="position: absolute; width: 10px; height: 10px; background: white; border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg);"></div></div>',
+          // Define custom icon for headquarters using standard Leaflet icon with gold color
+          const hqIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
             iconSize: [25, 41],
             iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
           });
 
           // Place markers for each office location
           offices.forEach(office => {
-            // Use special gold icon for headquarters, default blue for others
+            // Use gold marker for headquarters, default blue for others
             const markerIcon = office.isHQ ? hqIcon : undefined;
             const marker = L.marker([office.lat, office.lng], markerIcon ? { icon: markerIcon } : {}).addTo(map);
 
