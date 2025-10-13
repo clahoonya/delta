@@ -8,11 +8,11 @@ const HeadOfficeMap = () => {
 
   const headOffice = {
     name: "Delta Life Insurance Company - Head Office",
-    address: "4370 Peachtree Rd, NE",
-    fullAddress: "4370 Peachtree Rd, NE, Atlanta, GA 30319",
+    address: "4921 Jonesboro Rd Suite C",
+    fullAddress: "4921 Jonesboro Rd Suite C, Forest Park, GA 30297",
     phone: "404-231-2111",
-    lat: 33.8488,
-    lng: -84.3632,
+    lat: 33.616,
+    lng: -84.366,
   };
 
   useEffect(() => {
