@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FileText, Home } from "lucide-react";
 
 const ProductsOverview = () => {
+  // Define our product offerings
   const products = [
     {
       icon: FileText,

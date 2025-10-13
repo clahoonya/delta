@@ -19,8 +19,8 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Form validation
+
+    // Make sure all fields are filled out
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Missing Information",
@@ -30,6 +30,7 @@ const Contact = () => {
       return;
     }
 
+    // Send the contact form to our email API
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
@@ -49,6 +50,7 @@ const Contact = () => {
           title: "Message Sent!",
           description: "Thank you for contacting us. We'll get back to you soon."
         });
+        // Reset form after successful submission
         setFormData({ name: "", email: "", message: "" });
       } else {
         throw new Error('Failed to send message');

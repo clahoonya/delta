@@ -7,6 +7,7 @@ const AboutPreview = () => {
     <section className="py-16 md:py-24 bg-background-subtle">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
+          {/* Two-column layout: image on left, content on right */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img

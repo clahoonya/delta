@@ -154,7 +154,7 @@ const GeorgiaMap = () => {
   const mapInstanceRef = useRef<any>(null);
 
   useEffect(() => {
-    // Wait for Leaflet to be available
+    // Check if Leaflet library is loaded
     const checkLeaflet = () => {
       if (typeof window === 'undefined' || !(window as any).L) {
         return false;
@@ -162,19 +162,19 @@ const GeorgiaMap = () => {
       return true;
     };
 
-    // Function to initialize map
+    // Initialize the interactive map
     const initMap = () => {
       if (!checkLeaflet()) {
-        setTimeout(initMap, 100); // Retry after 100ms
+        setTimeout(initMap, 100);
         return;
       }
 
       const L = (window as any).L;
 
-      // Only initialize if map hasn't been created yet and ref exists
+      // Only create map if it doesn't exist yet
       if (mapRef.current && !mapInstanceRef.current) {
         try {
-          // Initialize the map with lower zoom to show all pins
+          // Center the map on Georgia and set zoom level to show all offices
           const map = L.map(mapRef.current).setView([32.84, -83.63], 6);
           mapInstanceRef.current = map;
 
@@ -183,21 +183,21 @@ const GeorgiaMap = () => {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           }).addTo(map);
 
-          // Add markers for each office
+          // Place markers for each office location
           offices.forEach(office => {
             const marker = L.marker([office.lat, office.lng]).addTo(map);
             marker.bindPopup(`<strong>${office.name}</strong><br>${office.address}`);
-            
-            // Show popup on hover
+
+            // Display info popup when hovering over marker
             marker.on('mouseover', function() {
               this.openPopup();
             });
-            
+
             marker.on('mouseout', function() {
               this.closePopup();
             });
-            
-            // Add click event to open modal
+
+            // Click marker to view full office details
             marker.on('click', () => {
               setSelectedOffice(office);
             });
@@ -208,10 +208,9 @@ const GeorgiaMap = () => {
       }
     };
 
-    // Start initialization
     initMap();
 
-    // Cleanup function
+    // Clean up map when component unmounts
     return () => {
       if (mapInstanceRef.current) {
         try {

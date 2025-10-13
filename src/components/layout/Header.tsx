@@ -8,6 +8,7 @@ const Header = () => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Main navigation menu items
   const navItems = [
     { label: "About", path: "/about" },
     { label: "Products", path: "/products" },
@@ -17,13 +18,15 @@ const Header = () => {
     { label: "Contact", path: "/contact" },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  // Helper to check if current path is active
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
               src={deltaLifeLogo} 
@@ -35,7 +38,7 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Navigation menu for desktop screens */}
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
@@ -61,7 +64,7 @@ const Header = () => {
             </Button>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Hamburger menu button for mobile */}
           <button
             className="md:hidden text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -74,7 +77,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile menu dropdown */}
         {mobileMenuOpen && (
           <nav className="md:hidden py-4 space-y-4">
             {navItems.map((item) => (
