@@ -106,7 +106,7 @@ const Contact = () => {
                     <p className="text-lg font-semibold">Delta Life Insurance Company</p>
                     <p>4921 Jonesboro Rd Suite C</p>
                     <p>Forest Park, GA 30297</p>
-                    <p className="pt-2">404-231-2111</p>
+                    <p className="pt-2">(404) 361-4897 • (800) 254-1076</p>
                   </div>
 
                   <div className="pt-6 border-t border-white/20">
