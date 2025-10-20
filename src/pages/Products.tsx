@@ -107,6 +107,17 @@ const Products = () => {
         "Individual and family plans available"
       ],
       brochureUrl: "/brochures/cancer-plan.pdf"
+    },
+    {
+      name: "Delta's 12-Point Protection Plan",
+      features: [
+        "Comprehensive household contents insurance",
+        "Protection against fire, smoke, and water damage",
+        "Coverage for lightning and storm damage",
+        "Safeguards furniture, appliances, electronics, and clothing",
+        "Simple and affordable package"
+      ],
+      brochureUrl: "/brochures/12-point-protection.pdf"
     }
   ];
 
@@ -282,6 +293,7 @@ const Products = () => {
                     <option value="Delta One Parent Family Plan">Delta One Parent Family Plan</option>
                     <option value="Delta Life Protector Plan">Delta Life Protector Plan</option>
                     <option value="Delta Life Lump Sum Cancer Plan">Delta Life Lump Sum Cancer Plan</option>
+                    <option value="Delta's 12-Point Protection Plan">Delta's 12-Point Protection Plan</option>
                   </select>
                 </div>
 
