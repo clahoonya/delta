@@ -61,7 +61,7 @@ const DistrictOffices = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                    <p className="text-muted-foreground">(229) 439-7021 • (800) 924-5433</p>
+                    <p className="text-muted-foreground">(229) 439-7021</p>
                   </div>
                 </div>
 
@@ -72,11 +72,15 @@ const DistrictOffices = () => {
                   <h3 className="text-xl font-semibold text-amber-600 mb-3">Atlanta Office</h3>
                   <div className="flex items-start gap-2 mb-2">
                     <MapPin className="h-4 w-4 text-amber-600 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700">4921 Jonesboro Rd Suite C, Forest Park, GA 30297</p>
+                    <p className="text-gray-700">Atlanta, GA 30319</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-amber-600 flex-shrink-0" />
-                    <p className="text-gray-700">(404) 361-4897 • (800) 254-1076</p>
+                  <div className="flex flex-col gap-1">
+                    <div className="flex items-center gap-2">
+                      <Phone className="h-4 w-4 text-amber-600 flex-shrink-0" />
+                      <p className="text-gray-700">(404) 231-2111</p>
+                    </div>
+                    <p className="text-gray-700 text-sm ml-6">Desk: 404.504.5880</p>
+                    <p className="text-gray-700 text-sm ml-6">Cell: 404.217.8626</p>
                   </div>
                 </div>
                 
@@ -88,7 +92,7 @@ const DistrictOffices = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                    <p className="text-muted-foreground">(706) 798-3244 • (800) 287-3244</p>
+                    <p className="text-muted-foreground">(706) 798-3244</p>
                   </div>
                 </div>
 
@@ -100,10 +104,10 @@ const DistrictOffices = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                    <p className="text-muted-foreground">(912) 384-3932 • (800) 725-3846</p>
+                    <p className="text-muted-foreground">(912) 384-3932</p>
                   </div>
                 </div>
-                
+
                 <div className="bg-card p-6 rounded-lg shadow-md card-hover">
                   <h3 className="text-xl font-semibold text-primary mb-3">Dublin Office</h3>
                   <div className="flex items-start gap-2 mb-2">
@@ -112,10 +116,10 @@ const DistrictOffices = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                    <p className="text-muted-foreground">(478) 272-1312 • (800) 865-0676</p>
+                    <p className="text-muted-foreground">(478) 272-1312</p>
                   </div>
                 </div>
-                
+
                 <div className="bg-card p-6 rounded-lg shadow-md card-hover">
                   <h3 className="text-xl font-semibold text-primary mb-3">Macon Office</h3>
                   <div className="flex items-start gap-2 mb-2">
@@ -124,10 +128,10 @@ const DistrictOffices = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                    <p className="text-muted-foreground">(478) 745-7961 • (800) 616-0277</p>
+                    <p className="text-muted-foreground">(478) 745-7961</p>
                   </div>
                 </div>
-                
+
                 <div className="bg-card p-6 rounded-lg shadow-md card-hover">
                   <h3 className="text-xl font-semibold text-primary mb-3">Savannah Office</h3>
                   <div className="flex items-start gap-2 mb-2">
@@ -136,10 +140,10 @@ const DistrictOffices = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                    <p className="text-muted-foreground">(912) 354-0996 • (800) 773-0996</p>
+                    <p className="text-muted-foreground">(912) 354-0996</p>
                   </div>
                 </div>
-                
+
                 <div className="bg-card p-6 rounded-lg shadow-md card-hover">
                   <h3 className="text-xl font-semibold text-primary mb-3">Thomasville Office</h3>
                   <div className="flex items-start gap-2 mb-2">
@@ -148,7 +152,7 @@ const DistrictOffices = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                    <p className="text-muted-foreground">(229) 226-9390 • (800) 281-9390</p>
+                    <p className="text-muted-foreground">(229) 226-9390</p>
                   </div>
                 </div>
               </div>

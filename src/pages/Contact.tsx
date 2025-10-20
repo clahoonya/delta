@@ -101,12 +101,13 @@ const Contact = () => {
                     <HeadOfficeMap />
                   </div>
 
-                  <h2 className="text-3xl font-bold text-white mb-8">Head Office</h2>
+                  <h2 className="text-3xl font-bold text-white mb-8">Home Office</h2>
                   <div className="text-white/90 space-y-4 mb-8">
                     <p className="text-lg font-semibold">Delta Life Insurance Company</p>
-                    <p>4921 Jonesboro Rd Suite C</p>
-                    <p>Forest Park, GA 30297</p>
-                    <p className="pt-2">(404) 361-4897 • (800) 254-1076</p>
+                    <p>Atlanta, GA 30319</p>
+                    <p className="pt-2">(404) 231-2111</p>
+                    <p className="text-sm">Desk: 404.504.5880</p>
+                    <p className="text-sm">Cell: 404.217.8626</p>
                   </div>
 
                   <div className="pt-6 border-t border-white/20">

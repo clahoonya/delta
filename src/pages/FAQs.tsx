@@ -39,7 +39,7 @@ const FAQs = () => {
       answer: "According to national data, viewing and burial funerals average around $8,300 (median), while cremation with viewing averages $6,280. General funeral costs typically range from $7,000 to $12,000. However, when you include cemetery-related costs (burial plot, opening/closing fees, vault, headstone), the total can easily reach $11,500 to $20,000+ depending on location, cemetery type (public vs. private), and service choices."
     },
     {
-      question: "Why should I choose whole life insurance over term life?",
+      question: "What is the difference between WL and Term?",
       answer: "Whole life insurance provides lifelong coverage with guaranteed premiums that never increase. It also builds cash value over time that you can access if needed. Term life insurance only covers you for a specific period and has no cash value. While term may have lower initial premiums, whole life offers permanent protection and long-term financial benefits."
     },
     {

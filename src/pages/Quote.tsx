@@ -150,7 +150,6 @@ const Quote = () => {
                         <SelectItem value="whole-life-graded">Graded Policy</SelectItem>
                         <SelectItem value="whole-life-paidup">10/20-Year Paid Up</SelectItem>
                         <SelectItem value="cancer">Cancer Insurance</SelectItem>
-                        <SelectItem value="property">Fire & Contents Insurance</SelectItem>
                         <SelectItem value="multiple">Multiple Products</SelectItem>
                       </SelectContent>
                     </Select>

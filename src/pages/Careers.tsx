@@ -6,69 +6,6 @@ import { Briefcase, Users, FileText, TrendingUp, Mail } from "lucide-react";
 import careersImage from "@/assets/business-professional.jpg";
 
 const Careers = () => {
-  const categories = [
-    {
-      icon: Briefcase,
-      title: "Administrative Support",
-      description: "Support roles keeping our operations running smoothly"
-    },
-    {
-      icon: TrendingUp,
-      title: "Business / Data Analysis",
-      description: "Analyze data and provide insights to drive business decisions"
-    },
-    {
-      icon: FileText,
-      title: "Claims",
-      description: "Help families during their time of need with compassionate service"
-    },
-    {
-      icon: Users,
-      title: "Customer Service / Operations",
-      description: "Deliver exceptional service and operational excellence"
-    },
-    {
-      icon: Briefcase,
-      title: "Finance / Accounting",
-      description: "Manage financial operations and ensure fiscal responsibility"
-    },
-    {
-      icon: Users,
-      title: "Human Resources",
-      description: "Support employee growth and organizational development"
-    },
-    {
-      icon: TrendingUp,
-      title: "Information Technology",
-      description: "Drive innovation and maintain our technology infrastructure"
-    },
-    {
-      icon: FileText,
-      title: "Legal Jobs",
-      description: "Provide legal guidance and ensure compliance"
-    },
-    {
-      icon: TrendingUp,
-      title: "Marketing and Communications",
-      description: "Build our brand and connect with communities"
-    },
-    {
-      icon: Users,
-      title: "Sales",
-      description: "Build relationships and protect families in your community"
-    },
-    {
-      icon: Briefcase,
-      title: "Product Management",
-      description: "Shape our insurance products and service offerings"
-    },
-    {
-      icon: Users,
-      title: "Students",
-      description: "Start your career with internship and entry-level opportunities"
-    }
-  ];
-
   return (
     <div className="min-h-screen">
       <Header />
@@ -135,33 +72,6 @@ const Careers = () => {
                   Enjoy comprehensive health coverage, retirement plans, and more.
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Career Categories */}
-        <section className="py-16 md:py-24 bg-background-soft">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-              Explore Career Opportunities
-            </h2>
-            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {categories.map((category, index) => {
-                const Icon = category.icon;
-                return (
-                  <Card key={index} className="card-hover">
-                    <CardHeader className="text-center">
-                      <div className="w-16 h-16 bg-secondary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                        <Icon className="w-8 h-8 text-secondary" />
-                      </div>
-                      <CardTitle className="text-lg">{category.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-center">
-                      <p className="text-muted-foreground text-sm">{category.description}</p>
-                    </CardContent>
-                  </Card>
-                );
-              })}
             </div>
           </div>
         </section>

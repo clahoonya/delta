@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { X, MapPin, Phone } from "lucide-react";
-import atlantaImage from "@/assets/offices/atlanta.png";
+import atlantaImage from "@/assets/offices/atlanta.jpeg";
 import albanyImage from "@/assets/offices/albany.jpg";
 import augustaImage from "@/assets/offices/augusta.jpg";
 import douglasImage from "@/assets/offices/douglas.jpg";

@@ -1,22 +1,42 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { FileText, Home } from "lucide-react";
 
 const ProductsOverview = () => {
   // Define our product offerings
   const products = [
     {
-      icon: FileText,
-      title: "Whole Life Insurance",
-      description: "Comprehensive coverage options including Classic Preferred, One Parent Family Policy, Graded Policy, and 10/20-Year Paid Up plans.",
-      link: "/products#whole-life"
+      title: "Delta Life Classic Preferred",
+      features: [
+        "Permanent protection",
+        "Children's rider to age 25",
+        "Premium waiver included",
+        "Accidental death benefit"
+      ]
     },
     {
-      icon: Home,
-      title: "Fire or Contents Insurance",
-      description: "Protect your home and belongings with comprehensive property insurance coverage.",
-      link: "/products#fire-contents"
+      title: "Delta One Parent Family Plan",
+      features: [
+        "Whole life paid up at age 65",
+        "Unlimited number of children covered",
+        "Additional benefits for loss of sight or limbs"
+      ]
+    },
+    {
+      title: "Delta Life Protector Plan",
+      features: [
+        "Simple issue graded death benefit",
+        "Existing health conditions accepted",
+        "Immediate benefit"
+      ]
+    },
+    {
+      title: "Delta Life Lump Sum Cancer Plan",
+      features: [
+        "Benefits paid upon confirmed diagnosis of invasive or non-invasive Cancer",
+        "Annual Wellness benefit",
+        "Individual and family plans available"
+      ]
     }
   ];
 
@@ -32,28 +52,24 @@ const ProductsOverview = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-          {products.map((product, index) => {
-            const Icon = product.icon;
-            return (
-              <Card key={index} className="hover:shadow-lg transition-shadow text-center">
-                <CardHeader>
-                  <div className="w-14 h-14 bg-secondary/20 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                    <Icon className="w-7 h-7 text-secondary" />
-                  </div>
-                  <CardTitle className="text-xl">{product.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base mb-4 leading-relaxed">
-                    {product.description}
-                  </CardDescription>
-                  <Button asChild variant="outline" size="sm">
-                    <Link to={product.link}>Learn More</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            );
-          })}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-12">
+          {products.map((product, index) => (
+            <Card key={index} className="hover:shadow-lg transition-shadow text-center bg-white">
+              <CardHeader>
+                <CardTitle className="text-lg font-bold text-primary">{product.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  {product.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start text-left">
+                      <span className="mr-2 text-secondary">•</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         <div className="text-center">

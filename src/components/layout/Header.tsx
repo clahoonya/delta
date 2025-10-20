@@ -28,13 +28,13 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
-            <img 
-              src={deltaLifeLogo} 
-              alt="Delta Life Insurance Company Logo" 
+            <img
+              src={deltaLifeLogo}
+              alt="Delta Life Insurance Company Logo"
               className="h-10 w-auto"
             />
-            <div className="text-2xl font-bold text-white">
-              Delta Life
+            <div className="text-2xl font-bold text-white" style={{ fontFamily: "'Georgia', serif", fontSize: "1.7rem" }}>
+              Delta Life Insurance
             </div>
           </Link>
 
