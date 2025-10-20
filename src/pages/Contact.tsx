@@ -104,9 +104,9 @@ const Contact = () => {
                   <h2 className="text-3xl font-bold text-white mb-8">Home Office</h2>
                   <div className="text-white/90 space-y-4 mb-8">
                     <p className="text-lg font-semibold">Delta Life Insurance Company</p>
+                    <p>4370 Peachtree Rd NE Ste 500</p>
                     <p>Atlanta, GA 30319</p>
-                    <p className="pt-2">(404) 231-2111</p>
-                    <p className="text-sm">Desk: 404.504.5880</p>
+                    <p className="text-sm pt-2">Desk: 404.504.5880</p>
                     <p className="text-sm">Cell: 404.217.8626</p>
                   </div>
 

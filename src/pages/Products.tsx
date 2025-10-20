@@ -74,49 +74,39 @@ const Products = () => {
     {
       name: "Delta Life Classic Preferred",
       features: [
-        "Competitive premiums",
-        "Flexible coverage options",
-        "Cash value accumulation"
+        "Permanent protection",
+        "Children's rider to age 25",
+        "Premium waiver included",
+        "Accidental death benefit"
       ],
       brochureUrl: "/brochures/classic-preferred.pdf"
     },
     {
-      name: "Delta Life One Parent Family Policy",
+      name: "Delta One Parent Family Plan",
       features: [
-        "Family coverage in one policy",
-        "Affordable protection",
-        "Simple application process"
+        "Whole life paid up at age 65",
+        "Unlimited number of children covered",
+        "Additional benefits for loss of sight or limbs"
       ],
       brochureUrl: "/brochures/one-parent-family.pdf"
     },
     {
-      name: "Delta Life Graded Policy",
+      name: "Delta Life Protector Plan",
       features: [
-        "Guaranteed acceptance",
-        "No medical exam required",
-        "Immediate coverage"
+        "Simple issue graded death benefit",
+        "Existing health conditions accepted",
+        "Immediate benefit"
       ],
-      brochureUrl: "/brochures/graded-policy.pdf"
+      brochureUrl: "/brochures/protector-plan.pdf"
     },
     {
-      name: "10 and 20-Year Paid Up Whole Life",
+      name: "Delta Life Lump Sum Cancer Plan",
       features: [
-        "Limited payment period",
-        "Lifetime coverage",
-        "Guaranteed cash values"
+        "Benefits paid upon confirmed diagnosis of invasive or non-invasive Cancer",
+        "Annual Wellness benefit",
+        "Individual and family plans available"
       ],
-      brochureUrl: "/brochures/10-20-year-paid-up.pdf"
-    },
-    {
-      name: "Delta's 12-Point Protection Plan",
-      features: [
-        "Comprehensive household contents insurance",
-        "Protection against fire, smoke, and water damage",
-        "Coverage for lightning and storm damage",
-        "Safeguards furniture, appliances, electronics, and clothing",
-        "Simple and affordable package"
-      ],
-      brochureUrl: "/brochures/12-point-protection.pdf"
+      brochureUrl: "/brochures/cancer-plan.pdf"
     }
   ];
 
@@ -160,8 +150,8 @@ const Products = () => {
               </div>
               
               {/* Grid Layout for Products */}
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                {wholeLifeProducts.slice(0, 4).map((product, index) => (
+              <div className="grid md:grid-cols-2 gap-6 mb-16">
+                {wholeLifeProducts.map((product, index) => (
                   <Card key={index} className="transition-shadow text-center">
                     <CardHeader>
                       <CardTitle className="text-xl">{product.name}</CardTitle>
@@ -184,31 +174,6 @@ const Products = () => {
                     </CardContent>
                   </Card>
                 ))}
-              </div>
-
-              {/* 5th Product Centered */}
-              <div className="max-w-2xl mx-auto mb-16">
-                <Card className="transition-shadow text-center">
-                  <CardHeader>
-                    <CardTitle className="text-xl">{wholeLifeProducts[4].name}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2 text-muted-foreground mb-4">
-                      {wholeLifeProducts[4].features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start justify-center">
-                          <span className="mr-2">•</span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={wholeLifeProducts[4].brochureUrl} download>
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Download Brochure
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
               </div>
 
             </div>
@@ -314,11 +279,9 @@ const Products = () => {
                   >
                     <option value="">Select a product</option>
                     <option value="Delta Life Classic Preferred">Delta Life Classic Preferred</option>
-                    <option value="Delta Life One Parent Family Policy">Delta Life One Parent Family Policy</option>
-                    <option value="Delta Life Graded Policy">Delta Life Graded Policy</option>
-                    <option value="10 and 20-Year Paid Up Whole Life">10 and 20-Year Paid Up Whole Life</option>
-                    <option value="Delta's 12-Point Protection Plan">Delta's 12-Point Protection Plan</option>
-                    <option value="Cancer product info">Cancer product info</option>
+                    <option value="Delta One Parent Family Plan">Delta One Parent Family Plan</option>
+                    <option value="Delta Life Protector Plan">Delta Life Protector Plan</option>
+                    <option value="Delta Life Lump Sum Cancer Plan">Delta Life Lump Sum Cancer Plan</option>
                   </select>
                 </div>
 

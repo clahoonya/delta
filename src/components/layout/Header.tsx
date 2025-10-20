@@ -33,7 +33,7 @@ const Header = () => {
               alt="Delta Life Insurance Company Logo"
               className="h-10 w-auto"
             />
-            <div className="text-2xl font-bold text-white" style={{ fontFamily: "'Georgia', serif", fontSize: "1.7rem" }}>
+            <div className="text-2xl font-bold text-white" style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 900, fontSize: "1.7rem" }}>
               Delta Life Insurance
             </div>
           </Link>

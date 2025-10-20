@@ -26,7 +26,7 @@ const FAQs = () => {
 
 4. Education and Guidance: Your agent explains coverage in plain language and helps with paperwork, providing hands-on support during the claims process.
 
-5. Affordable Policies: Smaller face-value policies ($1,000-$25,000) designed for final expenses.
+5. Affordable Policies: Smaller face-value policies ($2,000-$25,000) designed for final expenses.
 
 6. Trust and Accountability: Regular visits create accountability and visibility in the community.`
     },
