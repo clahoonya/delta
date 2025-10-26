@@ -2,7 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, Users, FileText, TrendingUp, Mail } from "lucide-react";
+import { Briefcase, Users, FileText, TrendingUp, Mail, Download } from "lucide-react";
 import careersImage from "@/assets/business-professional.jpg";
 
 const Careers = () => {
@@ -76,6 +76,35 @@ const Careers = () => {
           </div>
         </section>
 
+        {/* Recruiting Brochures */}
+        <section className="py-16 md:py-24 bg-[#1a2332]">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Learn More About Opportunities
+              </h2>
+              <p className="text-lg text-white/90 mb-8">
+                Download our recruiting brochures to discover the benefits and opportunities
+                of joining the Delta Life family.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <Button asChild variant="outline" size="lg">
+                  <a href="/brochures/recruiting-full.pdf" download>
+                    <Download className="w-5 h-5 mr-2" />
+                    Download Full Brochure
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <a href="/brochures/recruiting-mini.pdf" download>
+                    <Download className="w-5 h-5 mr-2" />
+                    Download Quick Guide
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Call to Action */}
         <section className="py-16 md:py-24 bg-background-accent">
           <div className="container mx-auto px-4">
@@ -84,8 +113,8 @@ const Careers = () => {
                 Ready to Join Our Team?
               </h2>
               <p className="text-lg text-white/90 mb-8">
-                We're always looking for talented, dedicated individuals who share our commitment 
-                to serving families and communities. Send us your information and we'll be in touch 
+                We're always looking for talented, dedicated individuals who share our commitment
+                to serving families and communities. Send us your information and we'll be in touch
                 about current opportunities.
               </p>
               <Button asChild variant="default" size="lg">
