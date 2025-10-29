@@ -82,6 +82,16 @@ const Products = () => {
       brochureUrl: "/brochures/classic-preferred.pdf"
     },
     {
+      name: "10/20 Pay Whole Life Policy",
+      features: [
+        "Premiums paid up in 10 or 20 years",
+        "Lifetime coverage guaranteed",
+        "Cash value accumulation",
+        "Flexible payment options"
+      ],
+      brochureUrl: "/brochures/whole-life-10-20-pay.pdf"
+    },
+    {
       name: "Delta Life Protector Plan",
       features: [
         "Simple issue graded death benefit",
@@ -89,6 +99,15 @@ const Products = () => {
         "Immediate benefit"
       ],
       brochureUrl: "/brochures/protector-plan.pdf"
+    },
+    {
+      name: "Delta One Parent Family Plan",
+      features: [
+        "Whole life paid up at age 65",
+        "Unlimited number of children covered",
+        "Additional benefits for loss of sight or limbs"
+      ],
+      brochureUrl: "/brochures/one-parent-family.pdf"
     },
     {
       name: "Delta's 12-Point Protection Plan",
@@ -100,25 +119,6 @@ const Products = () => {
         "Simple and affordable package"
       ],
       brochureUrl: "/brochures/12-point-protection.pdf"
-    },
-    {
-      name: "10/20 Pay Whole Life Policy",
-      features: [
-        "Premiums paid up in 10 or 20 years",
-        "Lifetime coverage guaranteed",
-        "Cash value accumulation",
-        "Flexible payment options"
-      ],
-      brochureUrl: "/brochures/whole-life-10-20-pay.pdf"
-    },
-    {
-      name: "Delta One Parent Family Plan",
-      features: [
-        "Whole life paid up at age 65",
-        "Unlimited number of children covered",
-        "Additional benefits for loss of sight or limbs"
-      ],
-      brochureUrl: "/brochures/one-parent-family.pdf"
     },
     {
       name: "Delta Life Lump Sum Cancer Plan",
