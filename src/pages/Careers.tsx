@@ -118,7 +118,7 @@ const Careers = () => {
                 about current opportunities.
               </p>
               <Button asChild variant="default" size="lg">
-                <a href="mailto:info@delta-life.com">
+                <a href="mailto:careers@delta-life.com">
                   <Mail className="w-5 h-5 mr-2" />
                   Apply Now
                 </a>

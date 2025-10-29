@@ -7,12 +7,12 @@ const HeadOfficeMap = () => {
   const mapInstanceRef = useRef<any>(null);
 
   const headOffice = {
-    name: "Delta Life Insurance Company - Head Office",
-    address: "4921 Jonesboro Rd Suite C",
-    fullAddress: "4921 Jonesboro Rd Suite C, Forest Park, GA 30297",
+    name: "Home Office",
+    address: "4370 Peachtree Road NE",
+    fullAddress: "4370 Peachtree Rd NE Ste 500, Atlanta, GA 30319",
     phone: "404-231-2111",
-    lat: 33.616,
-    lng: -84.366,
+    lat: 33.8485,
+    lng: -84.3635,
   };
 
   useEffect(() => {

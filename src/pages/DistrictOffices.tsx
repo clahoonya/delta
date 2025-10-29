@@ -74,12 +74,9 @@ const DistrictOffices = () => {
                     <MapPin className="h-4 w-4 text-amber-600 mt-1 flex-shrink-0" />
                     <p className="text-gray-700">4370 Peachtree Rd NE Ste 500, Atlanta, GA 30319</p>
                   </div>
-                  <div className="flex flex-col gap-1">
-                    <div className="flex items-center gap-2">
-                      <Phone className="h-4 w-4 text-amber-600 flex-shrink-0" />
-                      <p className="text-gray-700">Desk: 404.504.5880</p>
-                    </div>
-                    <p className="text-gray-700 text-sm ml-6">Cell: 404.217.8626</p>
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-4 w-4 text-amber-600 flex-shrink-0" />
+                    <p className="text-gray-700">404-231-2111</p>
                   </div>
                 </div>
                 

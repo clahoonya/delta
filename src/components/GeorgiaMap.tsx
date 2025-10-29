@@ -32,7 +32,7 @@ const offices: Office[] = [
     address: "2101 Dawson Rd",
     fullAddress: "2101 Dawson Rd, Albany, GA 31707",
     phone1: "(229) 439-7021",
-    phone2: "(800) 924-5433",
+    phone2: "",
     lat: 31.602,
     lng: -84.184,
     image: albanyImage,
@@ -43,8 +43,8 @@ const offices: Office[] = [
     city: "Atlanta",
     address: "4370 Peachtree Rd NE Ste 500",
     fullAddress: "4370 Peachtree Rd NE Ste 500, Atlanta, GA 30319",
-    phone1: "Desk: 404.504.5880",
-    phone2: "Cell: 404.217.8626",
+    phone1: "404-231-2111",
+    phone2: "",
     lat: 33.8485,
     lng: -84.3635,
     image: atlantaImage,
@@ -57,7 +57,7 @@ const offices: Office[] = [
     address: "1212 West Medical Park Rd",
     fullAddress: "1212 West Medical Park Rd, Augusta, GA 30909",
     phone1: "(706) 798-3244",
-    phone2: "(800) 287-3244",
+    phone2: "",
     lat: 33.455,
     lng: -82.046,
     image: augustaImage,
@@ -69,7 +69,7 @@ const offices: Office[] = [
     address: "810 North Madison Ave",
     fullAddress: "810 North Madison Ave, Douglas, GA 31533",
     phone1: "(912) 384-3932",
-    phone2: "(800) 725-3846",
+    phone2: "",
     lat: 31.509,
     lng: -82.851,
     image: douglasImage,
@@ -81,7 +81,7 @@ const offices: Office[] = [
     address: "120 Oak Street",
     fullAddress: "120 Oak Street, Dublin, GA 31021",
     phone1: "(478) 272-1312",
-    phone2: "(800) 865-0676",
+    phone2: "",
     lat: 32.539,
     lng: -82.923,
     image: dublinImage,
@@ -93,7 +93,7 @@ const offices: Office[] = [
     address: "1314 Hardeman Ave",
     fullAddress: "1314 Hardeman Ave, Macon, GA 31201",
     phone1: "(478) 745-7961",
-    phone2: "(800) 616-0277",
+    phone2: "",
     lat: 32.846,
     lng: -83.652,
     image: maconImage,
@@ -105,7 +105,7 @@ const offices: Office[] = [
     address: "2231 E Victory Dr",
     fullAddress: "2231 E Victory Dr, Savannah, GA 31414",
     phone1: "(912) 354-0996",
-    phone2: "(800) 773-0996",
+    phone2: "",
     lat: 32.041,
     lng: -81.066,
     image: savannahImage,
@@ -117,7 +117,7 @@ const offices: Office[] = [
     address: "444 E Jackson St",
     fullAddress: "444 E Jackson St, Thomasville, GA 31792",
     phone1: "(229) 226-9390",
-    phone2: "(800) 281-9390",
+    phone2: "",
     lat: 30.835,
     lng: -83.980,
     image: thomasvilleImage,
@@ -288,14 +288,16 @@ const GeorgiaMap = () => {
                       </a>
                     </p>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                    <p className="text-lg text-gray-900">
-                      <a href={`tel:${selectedOffice.phone2.replace(/\D/g, '')}`} className="hover:text-primary transition-colors">
-                        {selectedOffice.phone2}
-                      </a>
-                    </p>
-                  </div>
+                  {selectedOffice.phone2 && (
+                    <div className="flex items-center gap-3">
+                      <Phone className="h-5 w-5 text-primary flex-shrink-0" />
+                      <p className="text-lg text-gray-900">
+                        <a href={`tel:${selectedOffice.phone2.replace(/\D/g, '')}`} className="hover:text-primary transition-colors">
+                          {selectedOffice.phone2}
+                        </a>
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </CardContent>

@@ -106,8 +106,6 @@ const Contact = () => {
                     <p className="text-lg font-semibold">Delta Life Insurance Company</p>
                     <p>4370 Peachtree Rd NE Ste 500</p>
                     <p>Atlanta, GA 30319</p>
-                    <p className="text-sm pt-2">Desk: 404.504.5880</p>
-                    <p className="text-sm">Cell: 404.217.8626</p>
                   </div>
 
                   <div className="pt-6 border-t border-white/20">

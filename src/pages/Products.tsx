@@ -82,15 +82,6 @@ const Products = () => {
       brochureUrl: "/brochures/classic-preferred.pdf"
     },
     {
-      name: "Delta One Parent Family Plan",
-      features: [
-        "Whole life paid up at age 65",
-        "Unlimited number of children covered",
-        "Additional benefits for loss of sight or limbs"
-      ],
-      brochureUrl: "/brochures/one-parent-family.pdf"
-    },
-    {
       name: "Delta Life Protector Plan",
       features: [
         "Simple issue graded death benefit",
@@ -98,15 +89,6 @@ const Products = () => {
         "Immediate benefit"
       ],
       brochureUrl: "/brochures/protector-plan.pdf"
-    },
-    {
-      name: "Delta Life Lump Sum Cancer Plan",
-      features: [
-        "Benefits paid upon confirmed diagnosis of invasive or non-invasive Cancer",
-        "Annual Wellness benefit",
-        "Individual and family plans available"
-      ],
-      brochureUrl: "/brochures/cancer-plan.pdf"
     },
     {
       name: "Delta's 12-Point Protection Plan",
@@ -118,6 +100,34 @@ const Products = () => {
         "Simple and affordable package"
       ],
       brochureUrl: "/brochures/12-point-protection.pdf"
+    },
+    {
+      name: "10/20 Pay Whole Life Policy",
+      features: [
+        "Premiums paid up in 10 or 20 years",
+        "Lifetime coverage guaranteed",
+        "Cash value accumulation",
+        "Flexible payment options"
+      ],
+      brochureUrl: "/brochures/whole-life-10-20-pay.pdf"
+    },
+    {
+      name: "Delta One Parent Family Plan",
+      features: [
+        "Whole life paid up at age 65",
+        "Unlimited number of children covered",
+        "Additional benefits for loss of sight or limbs"
+      ],
+      brochureUrl: "/brochures/one-parent-family.pdf"
+    },
+    {
+      name: "Delta Life Lump Sum Cancer Plan",
+      features: [
+        "Benefits paid upon confirmed diagnosis of invasive or non-invasive Cancer",
+        "Annual Wellness benefit",
+        "Individual and family plans available"
+      ],
+      brochureUrl: "/brochures/cancer-plan.pdf"
     }
   ];
 
@@ -290,10 +300,11 @@ const Products = () => {
                   >
                     <option value="">Select a product</option>
                     <option value="Delta Life Classic Preferred">Delta Life Classic Preferred</option>
-                    <option value="Delta One Parent Family Plan">Delta One Parent Family Plan</option>
                     <option value="Delta Life Protector Plan">Delta Life Protector Plan</option>
-                    <option value="Delta Life Lump Sum Cancer Plan">Delta Life Lump Sum Cancer Plan</option>
                     <option value="Delta's 12-Point Protection Plan">Delta's 12-Point Protection Plan</option>
+                    <option value="10/20 Pay Whole Life Policy">10/20 Pay Whole Life Policy</option>
+                    <option value="Delta One Parent Family Plan">Delta One Parent Family Plan</option>
+                    <option value="Delta Life Lump Sum Cancer Plan">Delta Life Lump Sum Cancer Plan</option>
                   </select>
                 </div>
 
