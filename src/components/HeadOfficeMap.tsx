@@ -41,20 +41,33 @@ const HeadOfficeMap = () => {
           mapInstanceRef.current = map;
 
           // Add OpenStreetMap tile layer
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             maxZoom: 19
           }).addTo(map);
+
+          // Fix gray tiles issue - invalidate size when tiles load and after a delay
+          tileLayer.on('load', () => {
+            map.invalidateSize();
+          });
+
+          // Also call invalidateSize multiple times to ensure proper rendering
+          setTimeout(() => {
+            map.invalidateSize();
+          }, 100);
+
+          setTimeout(() => {
+            map.invalidateSize();
+          }, 300);
+
+          setTimeout(() => {
+            map.invalidateSize();
+          }, 500);
 
           // Add marker for head office
           const marker = L.marker([headOffice.lat, headOffice.lng]).addTo(map);
           marker.bindPopup(`<strong>${headOffice.name}</strong><br>${headOffice.address}`);
           marker.openPopup();
-
-          // Fix gray tiles issue - invalidate size after map is fully loaded
-          setTimeout(() => {
-            map.invalidateSize();
-          }, 100);
         } catch (error) {
           console.error('Error initializing map:', error);
         }
