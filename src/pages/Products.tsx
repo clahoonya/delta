@@ -113,7 +113,7 @@ const Products = () => {
       name: "Delta's 12-Point Protection Plan",
       features: [
         "Comprehensive household contents insurance",
-        "Protection against fire, smoke, and water damage",
+        "Protection against fire, and resulting smoke and water damage",
         "Coverage for lightning and storm damage",
         "Safeguards furniture, appliances, electronics, and clothing",
         "Simple and affordable package"
@@ -159,7 +159,9 @@ const Products = () => {
         <section className="py-16 md:py-24 bg-background-subtle">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Whole Life Insurance</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Whole Life Insurance <span className="text-white/40 mx-3">|</span> Supplemental Insurance <span className="text-white/40 mx-3">|</span> Fire & Contents Insurance
+              </h2>
               
               {/* Life Insurance Image */}
               <div className="mb-8 rounded-lg overflow-hidden shadow-md max-w-4xl mx-auto">
