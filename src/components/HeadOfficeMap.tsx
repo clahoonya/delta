@@ -36,38 +36,28 @@ const HeadOfficeMap = () => {
       // Only initialize if map hasn't been created yet and ref exists
       if (mapRef.current && !mapInstanceRef.current) {
         try {
-          // Initialize the map with tight zoom on head office
-          const map = L.map(mapRef.current).setView([headOffice.lat, headOffice.lng], 15);
+          // Initialize the map at a slightly lower zoom first
+          const map = L.map(mapRef.current).setView([headOffice.lat, headOffice.lng], 14);
           mapInstanceRef.current = map;
 
           // Add OpenStreetMap tile layer
-          const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             maxZoom: 19
           }).addTo(map);
-
-          // Fix gray tiles issue - invalidate size when tiles load and after a delay
-          tileLayer.on('load', () => {
-            map.invalidateSize();
-          });
-
-          // Also call invalidateSize multiple times to ensure proper rendering
-          setTimeout(() => {
-            map.invalidateSize();
-          }, 100);
-
-          setTimeout(() => {
-            map.invalidateSize();
-          }, 300);
-
-          setTimeout(() => {
-            map.invalidateSize();
-          }, 500);
 
           // Add marker for head office
           const marker = L.marker([headOffice.lat, headOffice.lng]).addTo(map);
           marker.bindPopup(`<strong>${headOffice.name}</strong><br>${headOffice.address}`);
           marker.openPopup();
+
+          // Fix gray tiles by zooming in after initial load
+          setTimeout(() => {
+            map.setView([headOffice.lat, headOffice.lng], 16, {
+              animate: true,
+              duration: 0.5
+            });
+          }, 500);
         } catch (error) {
           console.error('Error initializing map:', error);
         }
