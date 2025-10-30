@@ -158,11 +158,11 @@ const Products = () => {
         {/* Products Overview - Whole Life Insurance Grid */}
         <section className="py-16 md:py-24 bg-background-subtle">
           <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 text-center">
+              Whole Life Insurance <span className="text-white/40 mx-3">|</span> Supplemental Insurance <span className="text-white/40 mx-3">|</span> Fire & Contents Insurance
+            </h2>
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Whole Life Insurance <span className="text-white/40 mx-3">|</span> Supplemental Insurance <span className="text-white/40 mx-3">|</span> Fire & Contents Insurance
-              </h2>
-              
+
               {/* Life Insurance Image */}
               <div className="mb-8 rounded-lg overflow-hidden shadow-md max-w-4xl mx-auto">
                 <img
