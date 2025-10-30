@@ -11,8 +11,8 @@ const HeadOfficeMap = () => {
     address: "4370 Peachtree Road NE",
     fullAddress: "4370 Peachtree Rd NE Ste 500, Atlanta, GA 30319",
     phone: "404-231-2111",
-    lat: 33.879,
-    lng: -84.341,
+    lat: 33.871118,
+    lng: -84.3341498,
   };
 
   useEffect(() => {
