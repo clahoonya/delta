@@ -42,24 +42,31 @@ const HeadOfficeMap = () => {
 
           // Add OpenStreetMap tile layer
           L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 19
           }).addTo(map);
 
           // Add marker for head office
           const marker = L.marker([headOffice.lat, headOffice.lng]).addTo(map);
           marker.bindPopup(`<strong>${headOffice.name}</strong><br>${headOffice.address}`);
           marker.openPopup();
+
+          // Fix gray tiles issue - invalidate size after map is fully loaded
+          setTimeout(() => {
+            map.invalidateSize();
+          }, 100);
         } catch (error) {
           console.error('Error initializing map:', error);
         }
       }
     };
 
-    // Start initialization
-    initMap();
+    // Start initialization with a small delay to ensure DOM is ready
+    const timer = setTimeout(initMap, 100);
 
     // Cleanup function
     return () => {
+      clearTimeout(timer);
       if (mapInstanceRef.current) {
         try {
           mapInstanceRef.current.remove();
